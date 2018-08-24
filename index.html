@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>gulugulu</title>
+
+    <link rel="stylesheet" href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/gulugulu.css">
+</head>
+
+<body>
+<!--导航栏-->
+<nav class="navbar" role="navigation" id="nav">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">logo</a>
+        </div>
+        <div>
+            <ul class="nav navbar-nav navbar-left">
+                <li class="active"><a href="#">首页</a></li>
+                <li><a href="#">直播</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        &bull;&bull;&bull;
+                        <!--<b class="caret"></b>-->
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">游戏</a></li>
+                        <li><a href="#">娱乐</a></li>
+                        <li><a href="#">体育</a></li>
+                        <li><a href="#">二次元</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">咕噜咕噜</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">咕噜咕噜</a></li>
+                    </ul>
+                </li>
+                <form class="navbar-form navbar-left" role="search">
+                    <a href="#"><span id="gly" class="glyphicon glyphicon-search"></span></a>
+                    <input type="text" class="form-control" placeholder="&nbsp;&nbsp;搜索">
+                </form>
+                <!--<div>-->
+                    <!--<a href="#"><span id="gly" class="glyphicon glyphicon-search"></span></a>-->
+                    <!--<input type="text" class="form-control" placeholder="搜索">-->
+                <!--</div>-->
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><span class="glyphicon glyphicon-user"></span> 注册</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> 登录</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!--直播-->
+<div class="container" id="jum">
+     <div class="row" id="null"></div>
+     <div class="row" >
+          <div class="col-md-9" id="jumLeft">
+                <video id="video1" poster="images/video1.png" controls="controls"></video>
+          </div>
+          <div class="col-md-3" id="jumRight">
+                <div class="row" id="jumRightName">
+                     <div class="row">
+                          <div class="col-md-4">
+                              <img src="images/1.jpg" width="60px" height="60px">
+                          </div>
+                          <div class="col-md-8">
+                            <h4>老皮(mobilmobil)</h4>
+                            <h6>正在玩 <span>They Are Billions</span></h6>
+                          </div>
+                      </div>
+                     <div class="row">
+                           <h3>&nbsp;&nbsp;&nbsp;&nbsp;老皮台  OP  Channel</h3>
+                     </div>
+                <div class="row" id="jumRightPi">
+                      <div class="col-md-10">
+                           <h6>哈囉我是老皮，在我的台，歡笑第一、樂趣第二、吐槽第三，技
+                                術方面只是一個菜逼八～希望各位能有個歡樂的時光！
+                                點擊這裡 來和我一起互動聊天吧！</h6>
+                      </div>
+                </div>
+                </div>
+          </div>
+     </div><br>
+    <div class="row" id="jumBottom">
+        <div class="col-md-1" id="jumBottom2">
+            <a href="#"><img src="images/prev.png" height="135px"></a>
+            </div>
+        <div class="col-md-2" id="jumBottom1">
+            <a href="#"><img src="images/缩略图1.png" height="116px"></a>
+            <div class="hr"></div>
+        </div>
+        <div class="col-md-2">
+            <a href="#"><img src="images/缩略图2.png" height="116px"></a>
+            <div class="hr"></div>
+        </div>
+        <div class="col-md-2">
+            <a href="#"><img src="images/缩略图3.png" height="116px"></a>
+            <div class="hr"></div>
+        </div>
+        <div class="col-md-2">
+            <a href="#"><img src="images/缩略图4.png" height="116px"></a>
+            <div class="hr"></div>
+        </div>
+        <div class="col-md-2">
+            <a href="#"><img src="images/缩略图5.png" height="116px"></a>
+            <div class="hr"></div>
+        </div>
+        <div class="col-md-1">
+            <a href="#"><img src="images/prev.png" height="135px"></a>
+            <div class="hr"></div>
+        </div>
+    </div>
+</div>
+
+<div id="bannerBg">
+    <img src="images/banner_bg.png" width="1900px" height="660px">
+</div>
+
+<!--分类栏目-->
+<div class="container" id="column">
+    <div class="row">
+        <div class="col-md-3" id="column1">
+            <!--<div class="columnRow">-->
+            <div class="row">
+                <div class="col-md-3">
+                    <img src="images/gameicon.png" height="65px">
+                </div>
+                <br>
+                <div class="col-md-6"><p>游戏</p></div>
+            </div>
+            <div class="row">
+                <div class="col-md-5">
+                    <img src="images/缩略图1.png" height="65px">
+                </div>
+                <div class="col-md-5">
+                    <img src="images/缩略图1.png" height="65px">
+                </div>
+            <!--</div>-->
+            <!--<div class="row">-->
+                <div class="col-md-5">
+                    <img src="images/缩略图1.png" height="65px">
+                </div>
+                <div class="col-md-5">
+                    <img src="images/缩略图1.png" height="65px">
+                </div>
+            </div>
+            <!--</div>-->
+        </div>
+
+        <div class="col-md-3">
+            <!--<div class="columnRow">-->
+            <div class="row">
+                <div class="col-md-3">
+                    <img src="images/meiti.png" height="65px">
+                </div>
+                <br>
+                <div class="col-md-6"><p>娱乐</p></div>
+            </div>
+            <div class="row">
+                <div class="col-md-5">
+                    <img src="images/缩略图3.png" height="65px">
+                </div>
+                <div class="col-md-5">
+                    <img src="images/缩略图3.png" height="65px">
+                </div>
+            <!--</div>-->
+            <!--<div class="row">-->
+                <div class="col-md-5">
+                    <img src="images/缩略图3.png" height="65px">
+                </div>
+                <div class="col-md-5">
+                    <img src="images/缩略图3.png" height="65px">
+                </div>
+            </div>
+            <!--</div>-->
+        </div>
+
+        <div class="col-md-3">
+            <!--<div class="columnRow">-->
+            <div class="row">
+                <div class="col-md-3">
+                    <img src="images/tiyu.png" height="65px">
+                </div>
+                <br>
+                <div class="col-md-6"><p>体育</p></div>
+            </div>
+            <div class="row">
+                <div class="col-md-5">
+                    <img src="images/缩略图4.png" height="65px">
+                </div>
+                <div class="col-md-5">
+                    <img src="images/缩略图4.png" height="65px">
+                </div>
+                <!--</div>-->
+                <!--<div class="row">-->
+                <div class="col-md-5">
+                    <img src="images/缩略图4.png" height="65px">
+                </div>
+                <div class="col-md-5">
+                    <img src="images/缩略图4.png" height="65px">
+                </div>
+            </div>
+            <!--</div>-->
+        </div>
+
+        <div class="col-md-3">
+            <!--<div class="columnRow">-->
+            <div class="row">
+                <div class="col-md-3">
+                    <img src="images/erciyuan.png" height="65px">
+                </div>
+                <br>
+                <div class="col-md-6"><p>二次元</p></div>
+            </div>
+            <div class="row">
+                <div class="col-md-5">
+                    <img src="images/缩略图5.png" height="65px">
+                </div>
+                <div class="col-md-5">
+                    <img src="images/缩略图5.png" height="65px">
+                </div>
+                <!--</div>-->
+                <!--<div class="row">-->
+                <div class="col-md-5">
+                    <img src="images/缩略图5.png" height="65px">
+                </div>
+                <div class="col-md-5">
+                    <img src="images/缩略图5.png" height="65px">
+                </div>
+            </div>
+            <!--</div>-->
+        </div>
+
+    </div>
+</div>
+
+<!--资讯与预告-->
+<div id="trailer">
+<div class="container">
+        <div class="row" >
+            <!--资讯-->
+            <div class="col-md-8" id="trailerContent">
+                <div class="row">
+                    <div class="col-md-1" id="trailerContent1">
+                    <img src="images/consult.png" height="50px">
+                    </div>
+                    <div class="col-md-2" id="trailerContent2">官方资讯</div>
+                </div><br>
+                <div class="row">
+                    <div class="col-md-7">
+                        <div class="row">
+                            <img src="images/new1.png" height="230px">
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                            <img src="images/new2.png" height="112px">
+                            </div>
+                            <div class="col-md-6" id="trailerContent6">
+                            <img src="images/new3.png" height="112px">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5" id="trailerContent5">
+                         <div class="row">
+                             <div class="new">
+                                 <ul id="ul1">
+                             <li><a href="#">
+                                 <p>LPL夏季赛火热开战 百万大奖等你来<br>
+                                 <span>官方直播间转盘大抽奖 精彩赛事邀你共赏</span>
+                                 </p>
+                             </a></li>
+                                 <li><a href="#">
+                                     <p>LPL夏季赛火热开战 百万大奖等你来<br>
+                                         <span>官方直播间转盘大抽奖 精彩赛事邀你共赏</span>
+                                     </p>
+                                 </a></li>
+                                 <li><a href="#">
+                                     <p>LPL夏季赛火热开战 百万大奖等你来<br>
+                                         <span>官方直播间转盘大抽奖 精彩赛事邀你共赏</span>
+                                     </p>
+                                 </a></li>
+                                 </ul>
+                                 <ul id="ul2">
+                                     <li><a href="#">[新闻]TI8淘汰赛对阵表 LGD战VP VG内战</a></li>
+                                     <li><a href="#">[新闻]TI8淘汰赛对阵表 LGD战VP VG内战</a></li>
+                                     <li><a href="#">[新闻]TI8淘汰赛对阵表 LGD战VP VG内战</a></li>
+                                     <li><a href="#">[新闻]TI8淘汰赛对阵表 LGD战VP VG内战</a></li>
+                                     <li><a href="#">[新闻]TI8淘汰赛对阵表 LGD战VP VG内战</a></li>
+                                 </ul>
+                                 </div>
+                             </div>
+                    </div>
+                </div>
+</div>
+            <!--直播预告-->
+            <div class="col-md-3" id="trailerContent3" >
+                <div class="row">
+                    <div class="col-md-3">
+                        <img src="images/trailer.png" height="50px">
+                    </div>
+                    <div class="col-md-5" id="trailerContent22">直播预告</div>
+                </div>
+                <div class="row" >
+                    <div id="panelContent">
+                    <div class="panel-group" id="accordion">
+                        <div class="panel">
+                            <div class="panel-heading1">
+                                <!--<h4 class="panel-title">-->
+                                    <a data-toggle="collapse" data-parent="#accordion"
+                                       href="#collapseOne">
+                                        <h4><span>21日15:00</span>&nbsp;&nbsp;DOTA2 Ti8国际邀请赛</h4>
+                                    </a>
+                                <!--</h4>-->
+                            </div>
+                            <div id="collapseOne" class="panel-collapse collapse in">
+                                <div class="panel-body">
+                                    <img src="images/zhibo1.png">
+                                    <div class="yuGao"><a href="#">预告</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel">
+                            <div class="panel-heading1">
+                                <!--<h4 class="panel-title">-->
+                                    <a data-toggle="collapse" data-parent="#accordion"
+                                       href="#collapseTwo">
+                                        <h4><span>21日15:00</span>&nbsp;&nbsp;DOTA2 Ti8国际邀请赛</h4>
+                                    </a>
+                                <!--</h4>-->
+                            </div>
+                            <div id="collapseTwo" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <img src="images/zhibo1.png">
+                                    <div class="yuGao"><a href="#">预告</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel">
+                            <div class="panel-heading1">
+                                <!--<h4 class="panel-title">-->
+                                    <a data-toggle="collapse" data-parent="#accordion"
+                                       href="#collapseThree">
+                                        <h4><span>21日15:00</span>&nbsp;&nbsp;DOTA2 Ti8国际邀请赛</h4>
+                                    </a>
+                                <!--</h4>-->
+                            </div>
+                            <div id="collapseThree" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <img src="images/zhibo1.png">
+                                    <div class="yuGao"><a href="#">预告</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel">
+                            <div class="panel-heading1">
+                                <!--<h4 class="panel-title">-->
+                                <a data-toggle="collapse" data-parent="#accordion"
+                                   href="#collapseFour">
+                                    <h4><span>21日15:00</span>&nbsp;&nbsp;DOTA2 Ti8国际邀请赛</h4>
+                                </a>
+                                <!--</h4>-->
+                            </div>
+                            <div id="collapseFour" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <img src="images/zhibo1.png">
+                                    <div class="yuGao"><a href="#">预告</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel">
+                            <div class="panel-heading1">
+                                <!--<h4 class="panel-title">-->
+                                <a data-toggle="collapse" data-parent="#accordion"
+                                   href="#collapseFive">
+                                    <h4><span>21日15:00</span>&nbsp;&nbsp;DOTA2 Ti8国际邀请赛</h4>
+                                </a>
+                                <!--</h4>-->
+                            </div>
+                            <div id="collapseFive" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <img src="images/zhibo1.png">
+                                    <div class="yuGao"><a href="#">预告</a></div>
+                                </div>
+                            </div>
+                        </div>
+                            <div class="panel">
+                                <div class="panel-heading1">
+                                    <!--<h4 class="panel-title">-->
+                                    <a data-toggle="collapse" data-parent="#accordion"
+                                       href="#collapseSix">
+                                        <h4><span>21日15:00</span>&nbsp;&nbsp;DOTA2 Ti8国际邀请赛</h4>
+                                    </a>
+                                    <!--</h4>-->
+                                </div>
+                                <div id="collapseSix" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <img src="images/zhibo1.png">
+                                        <div class="yuGao"><a href="#">预告</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        <div class="panel">
+                            <div class="panel-heading1">
+                                <!--<h4 class="panel-title">-->
+                                <a data-toggle="collapse" data-parent="#accordion"
+                                   href="#collapseSeven">
+                                    <h4><span>21日15:00</span>&nbsp;&nbsp;DOTA2 Ti8国际邀请赛</h4>
+                                </a>
+                                <!--</h4>-->
+                            </div>
+                            <div id="collapseSeven" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <img src="images/zhibo1.png">
+                                    <div class="yuGao"><a href="#">预告</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--<div class="panel">-->
+                            <!--<div class="panel-heading1">-->
+                                <!--&lt;!&ndash;<h4 class="panel-title">&ndash;&gt;-->
+                                <!--<a data-toggle="collapse" data-parent="#accordion"-->
+                                   <!--href="#collapseEight">-->
+                                    <!--<h4><span>21日15:00</span>&nbsp;&nbsp;DOTA2 Ti8国际邀请赛</h4>-->
+                                <!--</a>-->
+                                <!--&lt;!&ndash;</h4>&ndash;&gt;-->
+                            <!--</div>-->
+                            <!--<div id="collapseEight" class="panel-collapse collapse">-->
+                                <!--<div class="panel-body">-->
+                                    <!--<img src="images/zhibo1.png">-->
+                                    <!--<div class="yuGao"><a href="#">预告</a></div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+</div>
+        </div>
+</div>
+
+<!--关注链接-->
+<div class="container" id="attention">
+     <div class="row">
+         <div class="col-md-4">
+             <div class="row">
+             <img src="images/1-1-01.jpg">
+         </div></div>
+         <div class="col-md-4" id="attention4">
+            <div class="row">
+                <!--<div class="col-md-2"></div>-->
+                <!--<div class="col-md-8"> -->
+                    <div class="attPhoto"><img src="images/title1-01.png" height="33px"></div>
+                <!--</div>-->
+                <!--<div class="col-md-2"></div>-->
+               </div>
+             <div class="row">
+                 <div id="attBtn">
+                     <button type="button" class="btn-lg">Facebook</button>
+                     <button type="button" class="btn-lg">Twitter</button>
+                     <button type="button" class="btn-lg">官方微博</button>
+                 </div>
+             </div>
+         </div>
+         <!--<div class="col-md-4">-->
+             <!--<div class="row">-->
+                 <!--<div class="col-md-2"><div class="row"></div> </div>-->
+                 <!--<div class="col-md-10"><div class="row"> <img src="images/1-2-01.jpg"></div><div></div>-->
+         <!--</div></div>-->
+             <div class="col-md-4" id="attention44">
+                 <div class="row">
+                     <img src="images/1-2-01.jpg">
+                 </div></div>
+     </div>
+</div>
+
+<!--热门在线频道-->
+<div id="hotOnline">
+    <div class="container">
+        <div class="row"></div>
+    </div>
+</div>
+    <!--<script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>-->
+    <!--<script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>-->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
