@@ -23,6 +23,7 @@ body{
     /*text-align: center;*/
     /*color: white;*/
     background-color: #6950A1;
+    /*background-color: #402e4c;*/
     /*border: none;*/
 }
 #nav ul li a{
@@ -388,4 +389,47 @@ table { border-collapse:collapse; border-spacing:0; }
 #hotOnline .hotOnlineContent2 .col-md-7 .col-md-8 p{
     color: #848484;
     padding-top: 10px;
+}
+
+/*版尾*/
+#version{
+    margin: 0;
+    padding: 0;
+    background-color: #402e4c;
+    /*height: 300px;*/
+}
+#version #version2{
+    padding-top: 50px;
+    padding-bottom: 40px;
+}
+#version #version2 p,#version #version2 a{
+    color: white;
+    opacity: 0.8;
+}
+#version #version2 p,#version #version2 ul{
+    padding-left: 0;
+    margin-left: 0;
+}
+#version #version2 p,#version #version2 ul li{
+    text-align: left;
+    padding-top: 5px;
+}
+#version #version2 .col-md-6{
+   text-align: center;
+}
+#version #version2 #vp1 p{
+    /*padding-right: 0;*/
+    /*margin-right: 0;*/
+    text-align: right;
+    margin: 0;
+}
+#version #version2 #vp2 .vp{
+    text-align: right;
+    font-size: x-small;
+    padding: 2px;
+    margin: 0;
+}
+#version #version2 #vp3{
+    padding-top: 20px;
+    text-align: right;
 }
