@@ -27,7 +27,7 @@ body{
 }
 #nav ul li a{
     color: white;
-    font-size: large;
+    font-size: medium;
 }
 #nav ul li a p{
     color: black;
@@ -40,16 +40,23 @@ body{
     margin-top: 5px;
     margin-right: 20px;
 }
+#nav .container-f form .input-group{
+    border: solid 1px black;
+    border-radius: 2px;
+}
+#nav .container-f form span{
+    background-color: white;
+}
+#nav .container-f form span a{
+    color: black;
+    text-decoration: none;
+}
 .active{
     background-color: #6950A1;
     border-bottom: solid 2px white;
 }
 table { border-collapse:collapse; border-spacing:0; }
-#gly{
-    position: relative;
-    left: 25px;
-    z-index: 1;
-}
+
 
 /*直播*/
 #bannerBg{
