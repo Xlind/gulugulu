@@ -18,17 +18,38 @@ body{
 
 /*导航栏*/
 #nav{
-    margin: 0;
-    padding: 0;
+    /*margin: 0;*/
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    /*border-radius: 0;*/
     /*text-align: center;*/
     /*color: white;*/
     background-color: #6950A1;
     /*background-color: #402e4c;*/
     /*border: none;*/
 }
+#nav .container-f .navLeft ul li{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#nav .container-f #navRight{
+    padding-right: 20px;
+}
 #nav ul li a{
     color: white;
     font-size: medium;
+}
+#nav ul li a:hover{
+    color: #c77eb5;
+    background-color: #6950A1 ;
+}
+#nav ul li button{
+    outline: none;
+}
+#nav ul li a span{
+    color: white;
 }
 #nav ul li a p{
     color: black;
@@ -52,10 +73,10 @@ body{
     color: black;
     text-decoration: none;
 }
-.active{
-    background-color: #6950A1;
-    border-bottom: solid 2px white;
-}
+/*.active{*/
+    /*background-color: #6950A1;*/
+    /*border-bottom: solid 2px white;*/
+/*}*/
 table { border-collapse:collapse; border-spacing:0; }
 #nav .container-f ul li .liStyle{
 
@@ -153,8 +174,12 @@ table { border-collapse:collapse; border-spacing:0; }
 
     /*直播*/
 #bannerBg{
-    margin: 0;
-    padding: 0;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 58px;
+    padding-bottom: 40px;
     background-image: url("../images/banner_bg.png");
     /*position: absolute;*/
     /*top: 50px;*/

@@ -14,12 +14,13 @@
 
 <body>
 <!--导航栏-->
-<nav class="navbar navbar-define" role="navigation" id="nav">
+<nav class="navbar navbar-define navbar-fixed-top" role="navigation" id="nav">
     <div class="container-f">
         <div class="navbar-header">
             <img src="images/logo.png" height="45px">
         </div>
         <!--<div>-->
+        <div class="navLeft">
         <ul class="nav navbar-nav navbar-left">
             <li class="active"><a href="#">首页</a></li>
             <li><a href="#">直播</a></li>
@@ -41,7 +42,7 @@
             </li>
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    &bull;&bull;&bull;
+                    &bull;&bull;&bull;&nbsp;&nbsp;&nbsp;
                     <!--<b class="caret"></b>-->
                 </a>
                 <ul class="dropdown-menu">
@@ -56,6 +57,7 @@
                 </ul>
             </li>
         </ul>
+        </div>
         <form class="navbar-form navbar-left input-group" role="search">
             <div class="input-group">
                         <span class="input-group-addon" id="basic-addon1">
@@ -67,10 +69,17 @@
         </form>
 
         <ul class="nav navbar-nav navbar-right">
-            <li><a href="#"><span class="glyphicon glyphicon-user"></span> 历史</a></li>
+            <li id="navRight">
+                <a href="#">
+                <span class="glyphicon glyphicon-user"></span>
+                &nbsp;&nbsp;历史
+                </a>
+            </li>
             <!--<li><a href="#"><span class="glyphicon glyphicon-user " ></span> 注册</a></li>-->
             <li>
-                <button data-toggle="modal" data-target="#myModal2"><span class="glyphicon glyphicon-user "></span>&nbsp;登录
+                <button data-toggle="modal" data-target="#myModal2">
+                    <span class="glyphicon glyphicon-user "></span>
+                    &nbsp;&nbsp;登录
                 </button>
             </li>
             <li id="liH"><span>|</span></li>
