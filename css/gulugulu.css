@@ -57,9 +57,101 @@ body{
     border-bottom: solid 2px white;
 }
 table { border-collapse:collapse; border-spacing:0; }
+#nav .container-f ul li .liStyle{
 
+}
+#nav .container-f ul li button{
+    line-height: 50px;
+    background-color: #6950A1;
+    font-size: medium;
+    color: white;
+    border: none;
+}
+#nav .container-f #liH{
+    line-height: 50px;
+    color: white;
+}
 
-/*直播*/
+/*模态框*/
+#myModal .modal-content,#myModal2 .modal-content{
+    width: 700px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 80px;
+    /*padding-right: 50px;*/
+    background-color: white;
+    border-radius: 18px;
+    border: solid 1px #6950A1;
+}
+/*#myModal .modal-content .col-sm-6 .imgPhoto{*/
+/*}*/
+#myModal .modal-content .modalLand .loginHeight,#myModal2 .modal-content .modalLand .loginHeight{
+    padding-left: 16px;
+    height: 50px;
+    /*text-align: center;*/
+}
+#myModal .modal-content .modalLand .form-group .col-sm-8 .input1,#myModal2 .modal-content .modalLand .form-group .col-sm-8 .input1{
+    border:solid 1px #6950A1;
+    border-radius: 15px;
+    height: 33px;
+}
+#myModal .modal-content .modalLand .form-group .col-sm-8 .input2{
+    border:solid 1px #6950A1;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    height: 33px;
+}
+#myModal .modal-content .modalLand form .form-group,#myModal2 .modal-content .modalLand form .form-group{
+    height: 30px;
+}
+#myModal .modal-content .modalLand .form-group .btn,#myModal2 .modal-content .modalLand .form-group .btn{
+    width: 100%;
+    color: white;
+    border-radius: 15px;
+    background-color: #6950A1;
+}
+#myModal .modal-content .modalLand .formStyle .input3{
+    color: white;
+    background-color: #6950A1;
+    border:solid 1px #6950A1;
+    border-top-right-radius: 14px;
+    border-bottom-right-radius: 14px;
+}
+#myModal .modal-content .modalLand .formXie,#myModal2 .modal-content .modalLand .formXie{
+    position: relative;
+    top: -10px;
+    /*padding: 0;*/
+    /*margin: 0;*/
+}
+#myModal .modal-content .modalLand .checkbox span{
+    font-size: x-small;
+}
+#myModal2 .modal-content .modalLand .checkbox span{
+    font-size: small;
+    text-align: left;
+}
+#myModal .modal-content .modalLand .checkbox span a{
+    color: #6950A1 ;
+}
+#myModal2 .modal-content .modalLand .checkbox a{
+    font-size: small;
+    color: #6950A1 ;
+    /*text-align: right;*/
+    padding-left: 78px;
+}
+#myModal2 .modal-content .modalLand .form-group p{
+    font-size: xx-small;
+    color: #878787;
+}
+#myModal2 .modal-content .modalLand .form-group .colStyle{
+    text-align: center;
+}
+#myModal2 .modal-content .modalLand .form-group .colStyle img{
+    padding-left: 8px;
+    padding-right: 10px;
+}
+
+    /*直播*/
 #bannerBg{
     margin: 0;
     padding: 0;
