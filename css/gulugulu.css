@@ -72,7 +72,7 @@ table { border-collapse:collapse; border-spacing:0; }
     color: white;
 }
 
-/*模态框*/
+/*登录和注册*/
 #myModal .modal-content,#myModal2 .modal-content{
     width: 700px;
     padding-top: 50px;
