@@ -178,7 +178,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <form class="form-horizontal" role="form">
+                        <form class="form-horizontal" role="form" name="form1">
                             <div class="form-group">
                                 <label for="name" class="control-label"></label>
                                 <div class="col-sm-9">
@@ -195,11 +195,11 @@
                                 <!--<div class="col-md-2"></div>-->
                                 <div class="col-sm-9">
                                     <div class="input-group">
-                                        <input type="text" class="form-control input2" placeholder="输入验证码"
+                                        <input type="text" class="form-control input2" id="yanZh" placeholder="输入验证码"
                                                aria-describedby="basic-addon2">
                                         <!--<button class="input-group-addon input3" id="basic-addon2">发送验证码</button>-->
                                         <span class="input-group-addon input3" id="basic-addon2">
-                                            <input type="button" class="inputStyle" value="发送验证码"></span>
+                                            <input type="button" class="inputStyle" value="获取验证码" onclick="isEmail()"></span>
                                     </div>
                                 </div>
                             </div>
@@ -220,14 +220,14 @@
                                 <div class="col-sm-9">
                                     <div class="checkbox">
                                         <label>
-                                            <input type="checkbox"><span>已同意<a href="#">《GULUGULU用户协议》</a></span>
+                                            <input type="checkbox" id="check1"><span>已同意<a href="#">《GULUGULU用户协议》</a></span>
                                         </label>
                                     </div>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <div class="col-sm-9">
-                                    <button type="submit" class="btn">注册</button>
+                                    <button type="submit" class="btn" onClick="isLogin()">注册</button>
                                 </div>
                             </div>
                         </form>
