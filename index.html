@@ -94,7 +94,7 @@
     </div>
 </nav>
 
-<!-- 注册框 -->
+<!-- 登录框 -->
 <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -122,8 +122,7 @@
                             <div class="form-group">
                                 <label for="password" class="control-label"></label>
                                 <div class="col-sm-9">
-                                    <input type="password" class="form-control input1" id="password2"
-                                           placeholder="输入密码">
+                                    <input type="password" class="form-control input1" id="password2" placeholder="输入密码">
                                 </div>
                             </div>
                             <div class="form-group formXie">
@@ -139,7 +138,7 @@
                             </div>
                             <div class="form-group formXie">
                                 <div class="col-sm-9">
-                                    <button type="submit" class="btn">登录</button>
+                                    <button type="submit" class="btn" onclick="landing()">登录</button>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -160,7 +159,7 @@
     </div><!-- /.modal -->
 </div>
 
-<!--登录框-->
+<!--注册框-->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -182,22 +181,21 @@
                             <div class="form-group">
                                 <label for="name" class="control-label"></label>
                                 <div class="col-sm-9">
-                                    <input type="text" class="form-control input1" id="name" placeholder="请输入名字">
+                                    <input type="text" class="form-control input1" id="name" placeholder="请输入名字，至少3个长度">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="email" class="control-label"></label>
                                 <div class="col-sm-9">
-                                    <input type="text" class="form-control input1" id="email" placeholder="请输入邮箱">
+                                    <input type="text" class="form-control input1" id="email" placeholder="请输入合法邮箱">
                                 </div>
                             </div>
                             <div class="form-group formStyle">
                                 <!--<div class="col-md-2"></div>-->
                                 <div class="col-sm-9">
                                     <div class="input-group">
-                                        <input type="text" class="form-control input2" id="yanZh" placeholder="输入验证码"
+                                        <input type="text" class="form-control input2" id="yanZh" placeholder="请输入验证码"
                                                aria-describedby="basic-addon2">
-                                        <!--<button class="input-group-addon input3" id="basic-addon2">发送验证码</button>-->
                                         <span class="input-group-addon input3" id="basic-addon2">
                                             <input type="button" class="inputStyle" value="获取验证码" onclick="gainVerificationCode(this)"></span>
                                     </div>
@@ -206,28 +204,27 @@
                             <div class="form-group">
                                 <label for="password" class="control-label"></label>
                                 <div class="col-sm-9">
-                                    <input type="password" class="form-control input1" id="password" placeholder="设置密码">
+                                    <input type="password" class="form-control input1" id="password" placeholder="设置密码，至少6个长度含字母和数字">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="password1" class="control-label"></label>
                                 <div class="col-sm-9">
-                                    <input type="password" class="form-control input1" id="password1"
-                                           placeholder="确认密码">
+                                    <input type="password" class="form-control input1" id="password1" placeholder="再次确认密码">
                                 </div>
                             </div>
                             <div class="form-group formXie">
                                 <div class="col-sm-9">
                                     <div class="checkbox">
                                         <label>
-                                            <input type="checkbox" id="check1"><span>已同意<a href="#">《GULUGULU用户协议》</a></span>
+                                            <input type="checkbox" id="check1" onclick="check()"><span>已同意<a href="#">《GULUGULU用户协议》</a></span>
                                         </label>
                                     </div>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <div class="col-sm-9">
-                                    <button type="submit" class="btn" onClick="isLogin()">注册</button>
+                                    <button type="submit" class="btn" id="submit" disabled="disabled" onClick="isLogin()">注册</button>
                                 </div>
                             </div>
                         </form>

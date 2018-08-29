@@ -47,25 +47,77 @@ function tick() {
 	}
 }
 
-function isLogin() {
-	// 用户名
-	var nameInput = document.form1.name.value;
-	var nPattern = new RegExp("^[0-9a-zA-Z\u4e00-\u9fa5_]{3,16}$");
-	if (!nPattern.test(nameInput)) {
-		alert("用户名不正确,至少三个字符，不能含特殊符号");
-		nameInput.focus();
-		return false;
-	}
-	// 验证码
-	var yzInput = document.form1.yanZhen.value;
-	// 设置密码
-	var pswInput = document.form1.password.value;
-	var pPattern = new RegExp("/^[a-zA-Z0-9_-]{6,16}$/");
-	if (!pPattern.test(pswInput)) {
-		alert("密码长度至少要四个字符");
-		pswInput.focus();
-		return false;
-	}
-	var pswInput1 = document.form1.password1.value;
+// 用户名
+function isName() {
+    var nameInput = document.form1.name.value;
+    var nPattern = new RegExp("^[0-9a-zA-Z\u4e00-\u9fa5_]{3,16}$");
+    if (!nPattern.test(nameInput)) {
+        alert("用户名不正确,至少三个长度，不能含特殊符号");
+        nameInput.focus();
+        return false;
+    }
+}
+// 设置密码
+function isPsw() {
+    var pswInput = document.form1.password.value;
+    var pPattern = new RegExp("^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,16}$");
+    if (!pPattern.test(pswInput)) {
+        alert("密码长度6至20个长度，密码需包含字母和数字");
+        pswInput.focus();
+        return false;
+    }
+    // 确认密码
+    var pswInput1 = document.form1.password1.value;
+    if(pswInput1!==pswInput){
+        alert("密码前后输入不一致，请重新输入");
+        pswInput1.focus();
+        return false;
+    }
+}
+//验证码不能空或不正确
 
+function isGainVerificationCode() {
+    var gPattern = new RegExp("/^[0-9]+$/");
+	var gainInput = document.form1.yanZh.value;
+	// var gPattern = new RegExp("/^[0-9]+$/");
+	if (!gPattern.test(gainInput)){
+	// if(gainInput==""){
+		alert("验证码不正确");
+		gainInput.focus();
+		return false;
+	}
+}
+//登录页面的用户名/邮箱/密码不能为空或不正确
+
+
+//选中复选框激活按钮
+function check(){
+    var checkbox = document.getElementById("check1");//选中checkbox的id；
+	var stm=document.getElementById("submit");
+    if(checkbox.checked===true){//按钮已选中
+        stm.removeAttribute("disabled");//移除disabled
+    }else{
+    	stm.setAttribute("disabled",true);
+    }
+}
+
+
+// 注册按钮判断
+function isLogin() {
+    isName();
+    isEmail();
+    isGainVerificationCode();
+    isPsw();
+}
+
+//登录按钮判断
+function landing() {
+    var nameInput1=document.getElementById("name1").value;
+    var pswInput1=document.getElementById("password2").value;
+	// var npPattern=new RegExp(" /\\S/");
+	if (nameInput1===""||pswInput1===""){
+		alert("输入不能为空或不正确！");
+		npPattern.focus();
+		return false;
+	}
 }
