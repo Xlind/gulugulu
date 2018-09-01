@@ -190,7 +190,8 @@ table { border-collapse:collapse; border-spacing:0; }
     padding-right: 0;
     padding-top: 58px;
     padding-bottom: 40px;
-    background-image: url("../images/banner_bg.png");
+    background: url("../images/banner_bg.png") no-repeat ;
+    background-size:cover;
     /*position: absolute;*/
     /*top: 50px;*/
     /*left: 0;*/
