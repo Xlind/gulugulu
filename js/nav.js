@@ -1,4 +1,5 @@
 $(function(){
+
     // nav收缩展开
     $('.navLive-item>a').on('click',function(){
         if (!$('.navLive').hasClass('navLive-mini')) {
@@ -14,6 +15,7 @@ $(function(){
             }
         }
     });
+
     //nav-mini切换
     $('#mini').on('click',function(){
         if (!$('.navLive').hasClass('navLive-mini')) {

@@ -12,20 +12,21 @@ a:hover{text-decoration: none;}
 .navLive{width:220px;height: 670px;background: #17141f;transition: all .3s; position: absolute;top:62px;left: 0; padding-left: 5px;}
 .navLive a{display: block;overflow: hidden;padding-left: 24px;line-height: 28px;max-height: 46px;color: #ABB1B7;transition: all .3s;z-index: 4}
 .navLive .navStyle span{border-left: solid 2px #880b83;padding-left: 10px}
-.navLive .navLive-item .imgHidden{display: none;}
+.navLive .navLive-item .imgHidden{display: none;width: 60px; height: 35px;text-align: left;}
 .navLive .heng span{opacity: 0.2;}
 .navLive a span{margin-left: 10px;}
 .navLive-item{position: relative; width: 200px;}
+/*.navLive-item .ul-show{opacity: 1;}*/
 .navLive-item ul li a img{padding-left: 6px;transition: all .3s;}
 .navLive-item ul li a span{font-size: x-small;}
 .navLive-item ul .liBox{padding-left: 20px;}
 .navLive-item ul li .li-item{width: 83px;text-align:center;font-size: small; background-color: #363636;border-radius: 3px;padding: 0;
     margin-left: 5px;margin-top:5px;float: left;}
-.navLive-item.navLive-show{border-bottom: none;}
+/*.navLive-item.navLive-show{border-bottom: none;}*/
 .navLive-item ul{display: block;padding-top: 10px}
-.navLive-item.navLive-show ul{display: none;}
+/*.navLive-item.navLive-show{display: block;}*/
 .navLive-item>a:before{content: "";position: absolute;left: 0;width: 2px;height: 46px;background: #34A0CE;opacity:0;text-decoration:none;transition: all .3s;}
-.navLive .navLive-icon{font-size: 20px;position: absolute;margin-left:-1px;}
+/*.navLive .navLive-icon{font-size: 20px;position: absolute;margin-left:-1px;}*/
 .navLive .navLive-item a {font-size: medium;}
 /* 此处修改导航图标 可自定义iconfont 替换*/
 .icon_1::after{content: "\e62b";}
@@ -45,28 +46,26 @@ a:hover{text-decoration: none;}
 #mini{position: absolute;left: 220px;top: 250px;
     transition: left 0.3s;}
 .navLive-mini.navLive{width: 80px;}
-.navLive-mini.navLive .navLive-icon{/* margin-left:-2px; */}
+/*.navLive-mini.navLive .navLive-icon{!* margin-left:-2px; *!}*/
 .navLive-mini.navLive .navLive-item .imgHidden{height: 30px;position: relative;display: block;}
 .navLive-mini.navLive .navLive-item>a span{display: none;}
+.navLive-mini.navLive .item-hidden{display: none;}
 /*.navLive-mini.navLive .navLive-more{margin-right: -20px;}*/
-.navLive-mini.navLive .navLive-item{padding-top: 40px;}
-.navLive-mini.navLive .navLive-item img{height: 30px;position: relative;}
-/*.navLive-mini.navLive .navLive-item ul{position: absolute;top:0;left:60px;width: 180px;z-index: 99;overflow: hidden;}*/
+.navLive-mini.navLive .navLive-item{padding-top: 40px;text-align: left;}
+.navLive-mini.navLive .navLive-item img{height: 35px;}
+.navLive-mini.navLive .navLive-item .item-img{position: relative;left: -4px;}
+.navLive-mini.navLive .navLive-item ul{position: absolute;top:0;left:60px;width: 180px;z-index: 99;overflow: hidden;}
 .navLive-mini.navLive .navLive-item:hover{background:rgba(255,255,255,.1);}
 .navLive-mini.navLive .navLive-item:hover .navLive-item a{color:#FFF;}
 .navLive-mini.navLive .navLive-item:hover a:before{opacity:1;}
 .navLive-mini.navLive .navLive-item ul{display: none;}
-/*.navLive-mini.navLive .navLive-item:hover ul{display: none;}*/
+.navLive-mini.navLive .navLive-item:hover ul{display: none;}
 .navLive-mini.navLive #mini{
     position: absolute;
     left: 80px;top: 250px;
     transition: left 0.3s;
 }
-#liveShow{ width: 95%;padding-left: 220px;}
-#liveShow .col-md-8{ background-color: yellow;}
-#liveShow .col-md-8 #liveH{height: 200px;background-color: #122b40;}
-#liveShow .col-md-8 #zhiBo{height: 500px;background-color: red;}
-#liveShow .col-md-4{ height:700px;background-color: #3c763d;}
+
 
 
 
