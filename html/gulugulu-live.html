@@ -170,8 +170,8 @@
 </div>
 <div class="container" id="live-content">
     <div class="row">
-        <div class="col-md-1 live-c1"></div>
-        <div class="col-md-7 live-c7">
+        <div class="col-md-1 live-c1" id="live1"></div>
+        <div class="col-md-7 live-c7" id="live2">
             <div class="row personMessage">
                 <div class="col-md-9">
                     <div class="row">
@@ -184,12 +184,10 @@
                 </div>
                 <div class="col-md-3"><div class="row rowNull"></div>
                     <div class="row">
-                        <!--<div class="col-md-1"></div>-->
-                        <!--<div class="col-md-11">-->
                         <div class="input-group">
                              <span class="input-group-addon input4" id="basic-addon3">&nbsp;&nbsp;<img src="../images/关注icon.png" height="18px">
-                            <input type="button" class="inputStyle1" value="关注" onclick="">&nbsp;</span>
-                            <input type="text" class="form-control input5" id="yanZh" placeholder="76,440.000"
+                            <input type="button" class="inputStyle1" id="focus1" value="关注" onclick="focusShow()">&nbsp;</span>
+                            <input type="text" class="form-control input5" id="focus2" value="764420"
                                    aria-describedby="basic-addon3">
                         </div>
                         <!--</div>-->
@@ -223,7 +221,7 @@
                     <input type="text" class="form-control input5" placeholder="发送弹幕可独得主播恩宠噢~"
                            aria-describedby="basic-addon4">
                     <span class="input-group-addon" id="basic-addon4">
-                    <input type="button" class="inputStyle1" value="发送" onclick=""></span>
+                    <input type="button" class="inputStyle1" id="sendMessage" value="发送" ></span>
                 </div>
             </div>
         </div>

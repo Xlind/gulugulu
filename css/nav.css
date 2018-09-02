@@ -78,7 +78,7 @@ a:focus{text-decoration: none;}
 #live-content .personMessage .rowNull{height: 50px;}
 #live-content .personMessage .inputStyle1{color: rgba(255,255,255,0.8);background-color: #6950A1;border:none;outline: none;}
 #live-content .personMessage .input-group span{font-size:medium;background-color:#6950A1;border-top-left-radius: 15px;border-bottom-left-radius: 15px;border: solid 1px #6950A1;}
-#live-content .personMessage .input5{border: solid 1px #6950A1; border-top-right-radius: 15px;border-bottom-right-radius: 15px;}
+#live-content .personMessage .input5{border: solid 1px #6950A1;color: #878787; border-top-right-radius: 15px;border-bottom-right-radius: 15px;}
 #live-content .online-live{height: 400px;background-color: black;margin-left: 20px;text-align: center;}
 #live-content .live-link{padding: 15px;}
 #live-content .live-link span{color: #87807b;margin-left: 5px;}
