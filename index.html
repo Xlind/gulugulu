@@ -9,16 +9,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>gulugulu</title>
-
-    <link rel="stylesheet" href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css">
-   <!--  <link rel="stylesheet" href="css/bootstrap.css"> -->
     <link rel="stylesheet" href="css/gulugulu.css">
-    <!--<link rel="stylesheet" href="css/bootstrapValidator.min.css">-->
-    <style type="text/css">
-        .help-block{
-            color: red;
-        }
-    </style>
+    <link rel="stylesheet" href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css">
+     <!--<link rel="stylesheet" href="css/bootstrap.css">-->
 </head>
 
 <body>
@@ -33,38 +26,26 @@
         <ul class="nav navbar-nav navbar-left">
             <li class="active"><a href="#">首页</a></li>
             <li><a href="html/gulugulu-live.html">直播</a></li>
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    分类
-                    <b class="caret"></b>
-                </a>
-                <ul class="dropdown-menu">
-                    <li><a href="#"><p>游戏</p></a></li>
-                    <li><a href="#"><p>娱乐</p></a></li>
-                    <li><a href="#"><p>体育</p></a></li>
-                    <li><a href="#"><p>二次元</p></a></li>
-                    <li class="divider"></li>
-                    <li><a href="#">咕噜咕噜</a></li>
-                    <li class="divider"></li>
-                    <li><a href="#">咕噜咕噜</a></li>
-                </ul>
-            </li>
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    &bull;&bull;&bull;&nbsp;&nbsp;&nbsp;
-                    <!--<b class="caret"></b>-->
-                </a>
-                <ul class="dropdown-menu">
-                    <li><a href="#"><p>游戏</p></a></li>
-                    <li><a href="#"><p>娱乐</p></a></li>
-                    <li><a href="#"><p>体育</p></a></li>
-                    <li><a href="#"><p>二次元</p></a></li>
-                    <li class="divider"></li>
-                    <li><a href="#">咕噜咕噜</a></li>
-                    <li class="divider"></li>
-                    <li><a href="#">咕噜咕噜</a></li>
-                </ul>
-            </li>
+            <li><a href="#" id="classifyId" rel= "popover" data-html="true" data-content="<div class='row classify'>
+            <div id='classifyTitle'>
+            <a href='#'><h4>游戏</h4></a>
+            <div id='classifyContent'>
+            <a href='#'><h5>绝地求生</h5></a>
+            <a href='#'><h5>王者荣耀</h5></a>
+            <a href='#'><h5>&nbsp;&nbsp;全部&nbsp;&nbsp;&nbsp;></h5></a></div></div>
+            <div><h6>&nbsp;&nbsp;</h6></div>
+            <div id='classifyTitle'>
+            <a href='#'><h4>其他</h4></a>
+            <div id='classifyContent'>
+            <a href='#'><h5>&nbsp;&nbsp;&nbsp;娱乐&nbsp;&nbsp;&nbsp;</h5></a>
+            <a href='#'><h5>&nbsp;&nbsp;&nbsp;体育&nbsp;&nbsp;&nbsp;</h5></a>
+            <a href='#'><h5>&nbsp;&nbsp;二次元&nbsp;&nbsp;&nbsp;</h5></a></div></div>
+            </div>">分类<b class="caret"></b></a></li>
+
+            <li><a href="#" id="aboutId" data-html="true" data-content="<div class='aboutOurs'>
+            <div class='aboutStyle'><img src='images/developer-icon.png' height='25px' align='left'><a href='#'><h5>关于我们</h5></a></div>
+            <div class='aboutStyle'><img src='images/about-icon.png' height='25px' align='left'><a href='#'><h5>开发人员</h5></a></div>
+            </div>">&bull;&bull;&bull;&nbsp;&nbsp;&nbsp;</a></li>
         </ul>
         </div>
         <form class="navbar-form navbar-left input-group" role="search">
@@ -80,8 +61,7 @@
         <ul class="nav navbar-nav navbar-right">
             <li id="navRight">
                 <a href="#">
-                <span class="glyphicon glyphicon-user"></span>
-                &nbsp;&nbsp;历史
+                <img src="images/history-icon.png" height="18px">历史
                 </a>
             </li>
             <!--<li><a href="#"><span class="glyphicon glyphicon-user " ></span> 注册</a></li>-->
@@ -90,8 +70,7 @@
                     <span class="glyphicon glyphicon-user "></span>
                     &nbsp;&nbsp;登录
                 </button>
-                <li>${sessionScope.uname}</li>
-            </li>
+            <li>${sessionScope.uname}</li>
             <li id="liH"><span>|</span></li>
             <li>
                 <button data-toggle="modal" data-target="#myModal">注册
@@ -939,5 +918,12 @@
 <script type="text/javascript" src="js/bootstrapValidator.min.js"></script>
 <script type="text/javascript" src="js/zh_CN.js"></script>
 <script src="js/gulu1.js"></script>
+<script>
+    // 二级导航
+    $ (function (){
+        $ ("#classifyId").popover ({placement:'bottom',trigger: 'focus'});
+        $ ("#aboutId").popover({placement:'bottom',trigger: 'focus'})
+    });
+</script>
 </body>
 </html>

@@ -6,7 +6,7 @@ body,ul{margin:0;padding:0;}
 li{list-style:none}
 a{text-decoration:none;}
 a:hover{text-decoration: none;}
-a:focus{text-decoration: none;}
+a:focus{text-decoration: none; color: #8552a1;outline: none;}
 
 /* nav */
 /*.navLayout{width: 580px;background-color: yellow; height: 670px;}*/
@@ -83,7 +83,7 @@ a:focus{text-decoration: none;}
 #live-content .live-link{padding: 15px;}
 #live-content .live-link span{color: #87807b;margin-left: 5px;}
 #live-content #danMu{background-color: #edddf2;margin-left: 20px;margin-right: 10px;padding-top: 20px;height: 480px;}
-#live-content #danMu p{padding-left:20px;color: #8552a1}
+#live-content #danMu p{padding-left:20px;color: #8552a1;}
 #live-content #danMu p span{padding-left: 15px;color: #777777;}
 #live-content #insertImg{background-color:white;;margin-left: 20px;margin-right: 10px;text-align: center;padding-top:10px;height: 70px;}
 #live-content #comment{background-color:white;;margin-left: 20px;margin-right: 10px;padding-left: 10px;padding-right: 10px;padding-bottom: 20px;}

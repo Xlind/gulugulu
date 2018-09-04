@@ -4,7 +4,7 @@
 address, cite, dfn, em, var { font-style:normal; }
 code, kbd, pre, samp { font-family:couriernew, courier, monospace; }
 small{ font-size:12px; }
-ul, ol { list-style:none; }
+ul, ol { list-style:none;}
 a { text-decoration:none;}
 a:hover { text-decoration:none; }
 sup { vertical-align:text-top; }
@@ -14,6 +14,9 @@ fieldset, img { border:0; }
 button, input, select, textarea { font-size:100%; }
 body{
     overflow-x:hidden;
+}
+.help-block{
+    color: red;
 }
 
 /*导航栏*/
@@ -30,6 +33,8 @@ body{
     /*background-color: #402e4c;*/
     /*border: none;*/
 }
+#nav a:visited{ background-color: #6950A1; text-decoration: none;}
+#nav a:focus{ color: #c77eb5; text-decoration: none;}
 #nav .container-f .navLeft ul li{
     padding-left: 10px;
     padding-right: 10px;
@@ -37,13 +42,21 @@ body{
 #nav .container-f #navRight{
     padding-right: 20px;
 }
+#nav .dropdown-menu{
+    background-image:url("../images/erjidaohang.png");
+    background-size:cover;
+}
+#nav .dropdown-menu ul li a{
+
+}
 #nav ul li a{
     color: white;
     font-size: medium;
 }
-#nav ul li a:hover{
+#nav ul li a:hover,#nav .container-f ul li button:hover{
     color: #c77eb5;
     background-color: #6950A1 ;
+    text-decoration: none;
 }
 #nav ul li button{
     outline: none;
@@ -78,8 +91,9 @@ body{
     /*border-bottom: solid 2px white;*/
 /*}*/
 table { border-collapse:collapse; border-spacing:0; }
-#nav .container-f ul li .liStyle{
-
+#nav .container-f #navRight img{
+       margin: 0;
+    padding-right: 10px;
 }
 #nav .container-f ul li button{
     line-height: 50px;
@@ -88,10 +102,23 @@ table { border-collapse:collapse; border-spacing:0; }
     color: white;
     border: none;
 }
+#nav .container-f ul li button span{color: white;}
 #nav .container-f #liH{
     line-height: 50px;
     color: white;
 }
+/*二级导航*/
+/*.popover{border-top:solid 1px #c77eb5;}*/
+/*.popover-content{width: 249px;}*/
+.classify{padding-left: 10px;width: 246px;}
+.classify p{font-size: xx-small;}
+#classifyTitle h4{background-color: white; color: black;width: 200px;}
+#classifyTitle h4:hover{background-color: white; color: black;}
+#classifyContent h5{background-color: rgba(155,149,201,0.35); color: #595959;padding: 8px; border-radius: 5px;float: left;margin-right: 5px;}
+#classifyContent h5:hover{background-color: rgba(155,149,201,0.35); color: #595959;}
+.aboutOurs{width: 110px;}
+.aboutOurs .aboutStyle{vertical-align:middle;}
+.aboutOurs h5{color: #595959;background-color: white;padding-top: 10px;}
 
 /*登录和注册*/
 #myModal .modal-content,#myModal2 .modal-content{
