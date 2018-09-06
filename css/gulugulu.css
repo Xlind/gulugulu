@@ -1,12 +1,9 @@
-/*body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td { margin:0; padding:0; }*/
-/*body, button, input, select, textarea { font:12px/1.5tahoma, arial, \5b8b\4f53; }*/
-/*h1, h2, h3, h4, h5, h6{ font-size:100%;}*/
 address, cite, dfn, em, var { font-style:normal; }
 code, kbd, pre, samp { font-family:couriernew, courier, monospace; }
 small{ font-size:12px; }
 ul, ol { list-style:none;}
-a { text-decoration:none;}
-a:hover { text-decoration:none; }
+a,a:hover{ text-decoration:none;}
+a:focus{outline: none;text-decoration: none;}
 sup { vertical-align:text-top; }
 sub{ vertical-align:text-bottom; }
 legend { color:#000; }
@@ -21,17 +18,11 @@ body{
 
 /*导航栏*/
 #nav{
-    /*margin: 0;*/
     padding-top: 5px;
     padding-bottom: 5px;
     padding-left: 10px;
     padding-right: 10px;
-    /*border-radius: 0;*/
-    /*text-align: center;*/
-    /*color: white;*/
     background-color: #6950A1;
-    /*background-color: #402e4c;*/
-    /*border: none;*/
 }
 #nav a:visited{ background-color: #6950A1; text-decoration: none;}
 #nav a:focus{ color: #c77eb5; text-decoration: none;}
@@ -41,13 +32,6 @@ body{
 }
 #nav .container-f #navRight{
     padding-right: 20px;
-}
-#nav .dropdown-menu{
-    background-image:url("../images/erjidaohang.png");
-    background-size:cover;
-}
-#nav .dropdown-menu ul li a{
-
 }
 #nav ul li a{
     color: white;
@@ -86,10 +70,6 @@ body{
     color: black;
     text-decoration: none;
 }
-/*.active{*/
-    /*background-color: #6950A1;*/
-    /*border-bottom: solid 2px white;*/
-/*}*/
 table { border-collapse:collapse; border-spacing:0; }
 #nav .container-f #navRight img{
        margin: 0;
@@ -107,9 +87,8 @@ table { border-collapse:collapse; border-spacing:0; }
     line-height: 50px;
     color: white;
 }
+
 /*二级导航*/
-/*.popover{border-top:solid 1px #c77eb5;}*/
-/*.popover-content{width: 249px;}*/
 .classify{padding-left: 10px;width: 246px;}
 .classify p{font-size: xx-small;}
 #classifyTitle h4{background-color: white; color: black;width: 200px;}
@@ -131,16 +110,10 @@ table { border-collapse:collapse; border-spacing:0; }
     border-radius: 18px;
     border: solid 1px #6950A1;
 }
-/*#myModal .modal-content .col-sm-6 .imgPhoto img{*/
-    /**/
-/*}*/
 #myModal .modal-content .modalLand .loginHeight,#myModal2 .modal-content .modalLand .loginHeight{
-    /*padding-left: 0;*/
-    /*margin-left: 0;*/
     position: relative;
     left: -15px;
     height: 50px;
-    /*text-align: center;*/
 }
 #myModal .modal-content .modalLand .form-group .col-sm-9 .input1,#myModal2 .modal-content .modalLand .form-group .col-sm-9 .input1{
     border:solid 1px #6950A1;
@@ -178,8 +151,6 @@ table { border-collapse:collapse; border-spacing:0; }
 #myModal .modal-content .modalLand .formXie,#myModal2 .modal-content .modalLand .formXie{
     position: relative;
     top: -10px;
-    /*padding: 0;*/
-    /*margin: 0;*/
 }
 #myModal .modal-content .modalLand .checkbox span{
     font-size: x-small;
@@ -194,7 +165,6 @@ table { border-collapse:collapse; border-spacing:0; }
 #myModal2 .modal-content .modalLand .checkbox a{
     font-size: small;
     color: #6950A1 ;
-    /*text-align: right;*/
     padding-left: 124px;
 }
 #myModal2 .modal-content .modalLand .form-group p{
@@ -219,10 +189,6 @@ table { border-collapse:collapse; border-spacing:0; }
     padding-bottom: 40px;
     background: url("../images/banner_bg.png") no-repeat ;
     background-size:cover;
-    /*position: absolute;*/
-    /*top: 50px;*/
-    /*left: 0;*/
-    /*z-index: -2;*/
 }
 #null{
     height: 30px;
@@ -240,7 +206,6 @@ table { border-collapse:collapse; border-spacing:0; }
 }
 #jumRight{
     height: 440px;
-    /*background-color: #251930;*/
     background: rgba(37,25,48,0.54);
 }
 #jumRightName{
@@ -288,18 +253,10 @@ table { border-collapse:collapse; border-spacing:0; }
 /*分类栏目*/
 #column{
     margin-top: 30px;
-    /*background-color: yellow;*/
 }
 #column #column1{
     padding-left: 0;
 }
-/*#column .col-md-3{*/
-    /*background-color: #2e6da4;*/
-/*}*/
-/*#column .columnRow{*/
-    /*padding-left: 0;*/
-    /*background-color: #2e6da4;*/
-/*}*/
 #column .col-md-6 p{
     /*width: 27%;*/
     padding-left: 5px;
@@ -326,23 +283,17 @@ table { border-collapse:collapse; border-spacing:0; }
     height: 500px;
 }
 #trailer #trailerContent,#trailer #trailerContent3{
-    /*background-color: yellow;*/
-    /*height: 300px;*/
     margin-top: 40px;
 }
 #trailer #trailerContent1,#trailer #trailerContent3{
-    /*background-color: #2e6da4;*/
     padding-left: 0;
 }
 #trailer #trailerContent #trailerContent2,#trailer #trailerContent3 #trailerContent22{
-    /*width: 15%;*/
     margin-top: 13px;
     margin-left: 10px;
     background-color: #F9D3D4;
     color: black;
     font-size: x-large;
-    /*line-height: 30px;*/
-    /*height: 30px;*/
     float: left;
 }
 #trailer #trailerContent .col-md-6{
@@ -358,14 +309,10 @@ table { border-collapse:collapse; border-spacing:0; }
 #trailer #trailerContent5 {
      border-radius: 10px;
      background-color: white;
-     /*border: solid 2px #69429b;*/
  }
 #trailer #trailerContent5 .new{
     padding-top: 18px;
     padding-left: 0;
-    /*background-color: #2e6da4;*/
-    /*font-size: medium;*/
-    /*text-align: center;*/
 }
 #trailer #trailerContent5 .new p,#trailer #trailerContent3 h4{
     color: black;
@@ -393,14 +340,12 @@ table { border-collapse:collapse; border-spacing:0; }
 }
 #trailer #trailerContent3{
     margin-left: 50px;
-    /*background-color: #1b6d85;*/
 }
 #trailer #trailerContent3 #panelContent{
     margin-top: 20px;
     margin-left: 13px;
     background-color: white;
     border-radius: 10px;
-    /*padding-top: 25px;*/
     padding-left: 15px;
     padding-right: 15px;
     padding-top: 18px;
@@ -411,9 +356,6 @@ table { border-collapse:collapse; border-spacing:0; }
 }
 #trailer #trailerContent3 .panel .panel-body{
     border: none;
-    /*background-image: url("../images/zhibo1.png");*/
-    /*height: 77px;*/
-    /*padding-left: 10px;*/
     padding-top: 0;
     padding-bottom: 0;
     margin-top: 0;
@@ -421,30 +363,16 @@ table { border-collapse:collapse; border-spacing:0; }
 
 }
 #trailer #trailerContent3 #panelContent .panel-group .panel-heading1 {
-    /*border: none;*/
-    /*background-color: white;*/
-    /*background-color: #dbd6ea;*/
-    /*padding-top: 0;*/
-    /*padding-bottom: 0;*/
-    /*margin-top: 0;*/
-    /*margin-bottom: 0;*/
     margin-left: 13px;
     margin-right: 13px;
-    /*margin-bottom: 0;*/
-    /*margin: 0;*/
-    /*padding: 0;*/
 }
 #trailer #trailerContent3 #panelContent .panel-group .panel-heading1 h4{
     padding-bottom: 0;
     padding-top: 0;
     margin-top: 0;
     margin-bottom: 6px;
-    /*background-color: #F9D3D4;*/
 }
 #trailer #trailerContent3 #panelContent .yuGao a{
-    /*width: 40px;*/
-    /*height: 30px;*/
-    /*text-align: center;*/
     font-size: medium;
     color: white;
     background-color: #F9D3D4;
@@ -454,10 +382,7 @@ table { border-collapse:collapse; border-spacing:0; }
     z-index: 2;
 }
 #attention{
-    /*margin: 0;*/
     padding: 0;
-    /*background-image: url("../images/attention.png");*/
-    /*background-color: yellow;*/
     height: 200px;
 }
 #attention .row #attention4{
@@ -470,12 +395,9 @@ table { border-collapse:collapse; border-spacing:0; }
     text-align: center;
     width: 100%;
     height: 48px;
-    /*background-color: #8a6d3b;*/
 }
 #attention #attention4 #attBtn{
-    /*background-color: #3c763d;*/
     text-align: center;
-    /*padding: 10px;*/
 }
 #attention #attention4 #attBtn .btn-lg{
     border: none;
@@ -503,14 +425,11 @@ table { border-collapse:collapse; border-spacing:0; }
 }
 #hotOnline .hotOnlineContent2{
     margin-top: 10px;
-    /*background-color: #2b542c;*/
     text-align: center;
 }
 #hotOnline .hotOnlineContent2 .col-md-4 .hotBox{
     background-color: white;
     margin: 9px;
-    /*padding-left: 2%;*/
-    /*padding-right: 2%;*/
 }
 #hotOnline .hotOnlineContent2 .col-md-4 img{
     border-top-left-radius: 15px;
@@ -520,7 +439,6 @@ table { border-collapse:collapse; border-spacing:0; }
 }
 #hotOnline .hotOnlineContent3{
     background-color: white;
-    /*padding: 0;*/
     border-bottom-left-radius: 15px;
     -webkit-border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
@@ -530,8 +448,6 @@ table { border-collapse:collapse; border-spacing:0; }
     margin: 0;
 }
 #hotOnline .hotOnlineContent2 h4{
-    /*margin-left: 5%;*/
-    /*margin-top: 8%;*/
     padding: 0;
     background-color: #F9D3D4;
     color: black;
@@ -551,7 +467,6 @@ table { border-collapse:collapse; border-spacing:0; }
     margin: 0;
     padding: 0;
     background-color: #402e4c;
-    /*height: 300px;*/
 }
 #version #version2{
     padding-top: 50px;
@@ -560,6 +475,7 @@ table { border-collapse:collapse; border-spacing:0; }
 #version #version2 p,#version #version2 a{
     color: white;
     opacity: 0.8;
+    text-decoration:none;
 }
 #version #version2 p,#version #version2 ul{
     padding-left: 0;
@@ -573,8 +489,6 @@ table { border-collapse:collapse; border-spacing:0; }
    text-align: center;
 }
 #version #version2 #vp1 p{
-    /*padding-right: 0;*/
-    /*margin-right: 0;*/
     text-align: right;
     margin: 0;
 }

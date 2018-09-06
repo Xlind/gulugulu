@@ -274,6 +274,7 @@ function landing() {
 	
 	var str = JSON.stringify({ "name": $("#name1").val(), "pwd":$("#password2").val() });
 
+
 	$.ajax({
 		   type:'post',
 		   url: "user/username.do",
@@ -285,6 +286,7 @@ function landing() {
 		          if (data.data == "success") {
 					  alert("登录成功，正在跳转......");
 		        	  window.location.replace("http://localhost:8000/Gulugulu/");
+
         	  
 //		        	  location.reload(true);
 // 		        	  $("#meg").html($("#id").val());
