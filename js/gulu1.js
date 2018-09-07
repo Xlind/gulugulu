@@ -14,6 +14,21 @@ $(function(){
 	})
 });
 
+$(function() {
+	var sessionUname=$("#sessionUname").html().trim();
+	console.log("sessionUname is %s",sessionUname);
+	if(sessionUname!= null){
+		$("#login").hide();
+		$("#liH").hide();
+		$("#register").hide();
+	}
+	if(sessionUname==""){
+		$("#login").show();
+		$("#liH").show();
+		$("#register").show();
+	}
+});
+
 /*---------------------------注册输入框验证功能------------------------------------*/
 $(
 function validator(){
@@ -268,12 +283,11 @@ function landing() {
     var npPattern=new RegExp(" /\\S/");
 	if (nameInput1===""||pswInput1===""){
 		alert("输入不能为空或不正确！");
-		npPattern.focus();
+		//npPattern.focus();
 		return false;
 	}
 	
 	var str = JSON.stringify({ "name": $("#name1").val(), "pwd":$("#password2").val() });
-
 
 	$.ajax({
 		   type:'post',
@@ -285,18 +299,18 @@ function landing() {
 		          //alert("Data Loaded: " + JSON.stringify(data));
 		          if (data.data == "success") {
 					  alert("登录成功，正在跳转......");
+//		        	  window.location.replace("http://localhost:8000/Gulugulu/");
+					  window.location.reload();
+		          }else if(data.data == "loginexc"){
+		        	  alert("该用户还未注册");
 		        	  window.location.replace("http://localhost:8000/Gulugulu/");
-
-        	  
-//		        	  location.reload(true);
-// 		        	  $("#meg").html($("#id").val());
-		          } else {
+		          } 
+		          else {
 		        	  //$("#loginmeg").val("登陆错误");
 		        	  alert("密码错误，请重新登陆");
-//					  window.location.replace("http://localhost:8000/Gulugulu/");
+					  window.location.replace("http://localhost:8000/Gulugulu/");
 		          }
 	          }
 		 });
 	
 }
-
