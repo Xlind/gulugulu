@@ -20,9 +20,9 @@
         <!--<div>-->
         <div class="navLeft">
             <ul class="nav navbar-nav navbar-left">
-                <li><a href="../index.html">首页</a></li>
+                <li class="active"><a href="../index.html">首页</a></li>
                 <li><a href="../html/gulugulu-live.html">直播</a></li>
-                <li><a href="#" id="classifyId" rel="popover" data-html="true" data-content="<div class='row classify'>
+                <li><a href="#" id="classifyId" rel= "popover" data-html="true" data-content="<div class='row classify'>
             <div id='classifyTitle'>
             <a href='#'><h4>游戏</h4></a>
             <div id='classifyContent'>
@@ -39,8 +39,8 @@
             </div>">分类<b class="caret"></b></a></li>
 
                 <li><a href="#" id="aboutId" data-html="true" data-content="<div class='aboutOurs'>
-            <div class='aboutStyle'><img src='../images/developer-icon.png' height='25px' align='left'><a href='#'><h5>关于我们</h5></a></div>
-            <div class='aboutStyle'><img src='../images/about-icon.png' height='25px' align='left'><a href='#'><h5>开发人员</h5></a></div>
+            <div class='aboutStyle'><img src='images/developer-icon.png' height='25px' align='left'><a href='#'><h5>关于我们</h5></a></div>
+            <div class='aboutStyle'><img src='images/about-icon.png' height='25px' align='left'><a href='#'><h5>开发人员</h5></a></div>
             </div>">&bull;&bull;&bull;&nbsp;&nbsp;&nbsp;</a></li>
             </ul>
         </div>
@@ -61,14 +61,14 @@
                 </a>
             </li>
             <!--<li><a href="#"><span class="glyphicon glyphicon-user " ></span> 注册</a></li>-->
-            <li>
+            <li id="login">
                 <button data-toggle="modal" data-target="#myModal2">
                     <span class="glyphicon glyphicon-user "></span>
                     &nbsp;&nbsp;登录
                 </button>
-            <li>${sessionScope.uname}</li>
+            <li><label id="sessionUname" value="${sessionScope.uname}">${sessionScope.uname}</label></li>
             <li id="liH"><span>|</span></li>
-            <li>
+            <li id="register">
                 <button data-toggle="modal" data-target="#myModal">注册
                 </button>
             </li>
@@ -107,8 +107,7 @@
                             <div class="form-group">
                                 <label for="password" class="control-label"></label>
                                 <div class="col-sm-9">
-                                    <input type="password" class="form-control input1" id="password2"
-                                           placeholder="输入密码">
+                                    <input type="password" class="form-control input1" id="password2" placeholder="输入密码">
                                 </div>
                             </div>
                             <div class="form-group formXie">
@@ -163,22 +162,20 @@
                         </div>
                     </div>
                     <div class="row">
-                        <form class="form-horizontal" role="form" name="form1" id="registFrom">
+                        <form class="form-horizontal" role="form" name="form1" id="registFrom" >
                             <div class="form-group">
                                 <input type="hidden" name="Codemeg" id="Codemeg" class="form-control ">
                             </div>
                             <div class="form-group">
                                 <label for="name" class="control-label"></label>
                                 <div class="col-sm-9">
-                                    <input type="text" class="form-control input1" id="name" placeholder="请输入名字，至少3个长度"
-                                           name="username">
+                                    <input type="text" class="form-control input1" id="name" placeholder="请输入名字，至少3个长度" name="username">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="email" class="control-label"></label>
                                 <div class="col-sm-9">
-                                    <input type="text" class="form-control input1" id="email" placeholder="请输入合法邮箱"
-                                           name="email">
+                                    <input type="text" class="form-control input1" id="email" placeholder="请输入合法邮箱" name="email">
                                 </div>
                             </div>
                             <div class="form-group formStyle">
@@ -188,23 +185,20 @@
                                         <input type="text" class="form-control input2" id="yanZh" placeholder="请输入验证码"
                                                aria-describedby="basic-addon2" name="code">
                                         <span class="input-group-addon input3" id="basic-addon2">
-                                            <input type="button" class="inputStyle" value="获取验证码"
-                                                   onclick="gainVerificationCode(this)"></span>
+                                            <input type="button" class="inputStyle" value="获取验证码" onclick="gainVerificationCode(this)"></span>
                                     </div>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="password" class="control-label"></label>
                                 <div class="col-sm-9">
-                                    <input type="password" class="form-control input1" id="password"
-                                           placeholder="设置密码，至少6个长度含字母和数字" name="pw1">
+                                    <input type="password" class="form-control input1" id="password" placeholder="设置密码，至少6个长度含字母和数字" name="pw1">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="password1" class="control-label"></label>
                                 <div class="col-sm-9">
-                                    <input type="password" class="form-control input1" id="password1"
-                                           placeholder="再次确认密码" name="password">
+                                    <input type="password" class="form-control input1" id="password1" placeholder="再次确认密码" name="password">
                                 </div>
                             </div>
                             <!--<div class="form-group formXie">-->
@@ -218,7 +212,7 @@
                             <!--</div>-->
                             <div class="form-group">
                                 <div class="col-sm-9">
-                                    <button class="btn btn-primary" id="submit">注册</button>
+                                    <button  class="btn btn-primary" id="submit" >注册</button>
                                 </div>
                             </div>
                         </form>
@@ -583,6 +577,7 @@
 </div>
 
 
+<script src="../js/gulu1.js"></script>
 <script src="../js/jquery-3.3.1.min.js"></script>
 <script src="../js/bootstrap.min.js"></script>
 <!--<script src="http://cdn.bootcss.com/jquery/1.11.0/jquery.min.js" type="text/javascript"></script>-->

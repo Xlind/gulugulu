@@ -87,6 +87,7 @@ table { border-collapse:collapse; border-spacing:0; }
     line-height: 50px;
     color: white;
 }
+#nav #sessionUname{text-align: center;line-height: 50px;color: white;}
 
 /*二级导航*/
 .classify{padding-left: 10px;width: 246px;}
@@ -271,7 +272,7 @@ table { border-collapse:collapse; border-spacing:0; }
 #column .col-md-5 img{
     padding-left: 0;
     padding-top: 10px;
-    border-radius: 15px;
+    border-radius: 10px;
 }
 
 /*资讯与预告*/
