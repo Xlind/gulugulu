@@ -254,9 +254,7 @@ table { border-collapse:collapse; border-spacing:0; }
 /*分类栏目*/
 #column{
     margin-top: 30px;
-}
-#column #column1{
-    padding-left: 0;
+    padding: 0;
 }
 #column .col-md-6 p{
     /*width: 27%;*/
@@ -269,9 +267,11 @@ table { border-collapse:collapse; border-spacing:0; }
     height: 30px;
     float: left;
 }
-#column .col-md-5 img{
-    padding-left: 0;
-    padding-top: 10px;
+#column .columnPadding{
+   margin: 2px;
+}
+#column .col-md-6 img{
+    padding-top: 8px;
     border-radius: 10px;
 }
 
@@ -345,12 +345,13 @@ table { border-collapse:collapse; border-spacing:0; }
 #trailer #trailerContent3 #panelContent{
     margin-top: 20px;
     margin-left: 13px;
+    /*margin-bottom: 10px;*/
     background-color: white;
     border-radius: 10px;
     padding-left: 15px;
     padding-right: 15px;
     padding-top: 18px;
-    padding-bottom: 1px;
+    padding-bottom: 18px;
 }
 #trailer #trailerContent3 a{
     text-decoration: none;
