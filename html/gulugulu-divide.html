@@ -1,0 +1,2170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gulugulu分类</title>
+
+    <link rel="stylesheet" type="text/css" href="../css/gulugulu-divide.css">
+    <link rel="stylesheet" type="text/css" href="../css/gulugulu.css">
+    <!--<link rel="stylesheet" href="../css/bootstrap.css">-->
+    <link rel="stylesheet" href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css">
+
+</head>
+<body>
+<!--导航栏-->
+<nav class="navbar navbar-define navbar-fixed-top" role="navigation" id="nav">
+    <div class="container-f">
+        <div class="navbar-header">
+            <img src="../images/logo.png" height="45px">
+        </div>
+        <!--<div>-->
+        <div class="navLeft">
+            <ul class="nav navbar-nav navbar-left">
+                <li class="active"><a href="../index.html">首页</a></li>
+                <li><a href="../html/gulugulu-live.html">直播</a></li>
+                <li><a href="#" id="classifyId" rel= "popover" data-html="true" data-content="<div class='row classify'>
+            <div id='classifyTitle'>
+            <a href='#'><h4>游戏</h4></a>
+            <div id='classifyContent'>
+            <a href='../html/gulugulu-detail.html'><h5>星际争霸</h5></a>
+            <a href='#'><h5>黎明杀机</h5></a>
+            <a href='#'><h5>&nbsp;&nbsp;全部&nbsp;&nbsp;&nbsp;></h5></a></div></div>
+            <div><h6>&nbsp;&nbsp;</h6></div>
+            <div id='classifyTitle'>
+            <a href='#'><h4>其他</h4></a>
+            <div id='classifyContent'>
+            <a href='#'><h5>&nbsp;&nbsp;&nbsp;娱乐&nbsp;&nbsp;&nbsp;</h5></a>
+            <a href='#'><h5>&nbsp;&nbsp;&nbsp;体育&nbsp;&nbsp;&nbsp;</h5></a>
+            <a href='#'><h5>&nbsp;&nbsp;二次元&nbsp;&nbsp;&nbsp;</h5></a></div></div>
+            </div>">分类<b class="caret"></b></a></li>
+
+                <li><a href="#" id="aboutId" data-html="true" data-content="<div class='aboutOurs'>
+            <div class='aboutStyle'><img src='../images/developer-icon.png' height='25px' align='left'><a href='../html/gulugulu-AboutUs.html'><h5>关于我们</h5></a></div>
+            <div class='aboutStyle'><img src='../images/about-icon.png' height='25px' align='left'><a href='#'><h5>隐私政策</h5></a></div>
+            </div>">&bull;&bull;&bull;&nbsp;&nbsp;&nbsp;</a></li>
+            </ul>
+        </div>
+        <form class="navbar-form navbar-left input-group" role="search">
+            <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1">
+                        <a href="#" class="glyphicon glyphicon-search"></a>
+                        </span>
+                <input type="text" class="form-control" placeholder="搜索" aria-describedby="basic-addon1">
+                <!--<input type="text" class="form-control" placeholder="Search">-->
+            </div>
+        </form>
+
+        <ul class="nav navbar-nav navbar-right">
+            <li id="navRight">
+                <a href="../html/gulugulu-history.html">
+                    <img src="../images/history-icon.png" height="18px">历史
+                </a>
+            </li>
+            <!--<li><a href="#"><span class="glyphicon glyphicon-user " ></span> 注册</a></li>-->
+            <li id="login">
+                <button data-toggle="modal" data-target="#myModal2">
+                    <span class="glyphicon glyphicon-user "></span>
+                    &nbsp;&nbsp;登录
+                </button>
+            <li><label id="sessionUname" value="${sessionScope.uname}">${sessionScope.uname}</label></li>
+            <li id="liH"><span>|</span></li>
+            <li id="register">
+                <button data-toggle="modal" data-target="#myModal">注册
+                </button>
+            </li>
+            <!--<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> 登录</a></li>-->
+            <!--<li><a href="#"><span>|</span> 登录</a></li>-->
+        </ul>
+        <!--</div>-->
+    </div>
+</nav>
+
+<!-- 登录框 -->
+<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="row">
+                <div class="col-sm-6 imgPhoto">
+                    <div class="row">
+                        <br>
+                        <img src="../images/formPhoto.png" height="280px">
+                    </div>
+                </div>
+                <div class="col-sm-6 modalLand">
+                    <div class="row loginHeight">
+                        <div class="col-sm-9">
+                            <img src="../images/landHeader.png" height="30px">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <form class="form-horizontal" role="form">
+                            <div class="form-group">
+                                <label for="name" class="control-label"></label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control input1" id="name1" placeholder="用户名/邮箱">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="password" class="control-label"></label>
+                                <div class="col-sm-9">
+                                    <input type="password" class="form-control input1" id="password2" placeholder="输入密码">
+                                </div>
+                            </div>
+                            <div class="form-group formXie">
+                                <div class="col-sm-9">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox">
+                                            <span>记住我</span>
+                                            <a href="#">忘记密码？</a>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group formXie">
+                                <div class="col-sm-9">
+                                    <button type="submit" class="btn" onclick="landing()">登录</button>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-9">
+                                    <p>————————使用第三方账户登录—————————</p>
+                                </div>
+                                <div class="col-sm-9 colStyle">
+                                    <img src="../images/微博登录-01.png" height="32px">
+                                    <img src="../images/微信登录-01.png" height="32px">
+                                    <img src="../images/QQ登录-01.png" height="32px">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+
+<!--注册框-->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="row">
+                <div class="col-sm-6 imgPhoto">
+                    <div class="row">
+                        <br><br>
+                        <img src="../images/formPhoto.png" height="280px">
+                    </div>
+                </div>
+                <div class="col-sm-6 modalLand">
+                    <div class="row loginHeight">
+                        <div class="col-sm-9">
+                            <img src="../images/loginHeader.png" height="30px">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <form class="form-horizontal" role="form" name="form1" id="registFrom" >
+                            <div class="form-group">
+                                <input type="hidden" name="Codemeg" id="Codemeg" class="form-control ">
+                            </div>
+                            <div class="form-group">
+                                <label for="name" class="control-label"></label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control input1" id="name" placeholder="请输入名字，至少3个长度" name="username">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="control-label"></label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control input1" id="email" placeholder="请输入合法邮箱" name="email">
+                                </div>
+                            </div>
+                            <div class="form-group formStyle">
+                                <!--<div class="col-md-2"></div>-->
+                                <div class="col-sm-9">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control input2" id="yanZh" placeholder="请输入验证码"
+                                               aria-describedby="basic-addon2" name="code">
+                                        <span class="input-group-addon input3" id="basic-addon2">
+                                            <input type="button" class="inputStyle" value="获取验证码" onclick="gainVerificationCode(this)"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="password" class="control-label"></label>
+                                <div class="col-sm-9">
+                                    <input type="password" class="form-control input1" id="password" placeholder="设置密码，至少6个长度含字母和数字" name="pw1">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="password1" class="control-label"></label>
+                                <div class="col-sm-9">
+                                    <input type="password" class="form-control input1" id="password1" placeholder="再次确认密码" name="password">
+                                </div>
+                            </div>
+                            <!--<div class="form-group formXie">-->
+                            <!--<div class="col-sm-9">-->
+                            <!--<div class="checkbox">-->
+                            <!--<label>-->
+                            <!--<input type="checkbox" id="check1" onclick="check()"><span>已同意<a href="#">《GULUGULU用户协议》</a></span>-->
+                            <!--</label>-->
+                            <!--</div>-->
+                            <!--</div>-->
+                            <!--</div>-->
+                            <div class="form-group">
+                                <div class="col-sm-9">
+                                    <button  class="btn btn-primary" id="submit" >注册</button>
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+
+<!--banner-->
+<div id="banner"></div>
+
+<!--分类-->
+<div class="container" id="allDivide">
+    <div class="row allSortHeader">
+        <img src="../images/标题icon.png" height="50px" align="left">
+        <h4>所有在线频道</h4>
+    </div>
+    <div class="row allSortContent">
+        <div class="row">
+        <ul id="myTab" class="nav nav-pill nav-justify">
+            <li class="active">
+                <a href="#syzb" data-toggle="tab">所有直播</a>
+            </li>
+            <li><a href="#xjzb" data-toggle="tab">星际争霸</a></li>
+            <li><a href="#lmsj" data-toggle="tab">黎明杀机</a></li>
+            <li><a href="#Dota" data-toggle="tab">Dota</a></li>
+            <li><a href="#ckxt" data-toggle="tab">刺客信条</a></li>
+            <li><a href="#hyrzfrz" data-toggle="tab">火影忍者博人传</a></li>
+            <li><a href="#fgo" data-toggle="tab">Fate Grand Order</a></li>
+            <li><a href="#tekken" data-toggle="tab">Tekken7</a></li>
+        </ul>
+    </div>
+        <div id="myTabContent" class="tab-content">
+            <div class="tab-pane fade in active" id="syzb">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="tabBox">
+                            <div class="row">
+                                <a href=""><img src="../images/热门在线频道1-01.png" width="280px"></a>
+                            </div>
+                            <div class="row tab1">
+                                <div class="col-md-10">
+                                    <div class="row tab7">
+                                        <h5>7/9 宝藏猎人</h5>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="row tab3">
+                                                <img src="../images/头像1.jpg" height="35px">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="row tab8">
+                                                <h6>無口君</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="tabBox">
+                            <div class="row">
+                                <a href=""><img src="../images/热门在线频道2-01.png" width="280px"></a>
+                            </div>
+                            <div class="row tab1">
+                                <div class="col-md-10">
+                                    <div class="row tab7">
+                                        <h5>刺客信条编年史：俄罗斯</h5>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="row tab3">
+                                                <img src="../images/头像2.jpg" height="35px">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="row tab8">
+                                                <h6>卡古三</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="tabBox">
+                            <div class="row">
+                                <a href=""><img src="../images/热门在线频道3-01.png" width="280px"></a>
+                            </div>
+                            <div class="row tab1">
+                                <div class="col-md-10">
+                                    <div class="row tab7">
+                                        <h5>万圣复刻会是阿邢的机会吗</h5>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="row tab3">
+                                                <img src="../images/头像3.jpg" height="35px">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="row tab8">
+                                                <h6>乌鸦坐飞姬</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="tabBox">
+                            <div class="row">
+                                <a href=""><img src="../images/热门在线频道6-01.png" width="280px"></a>
+                            </div>
+                            <div class="row tab1">
+                                <div class="col-md-10">
+                                    <div class="row tab7">
+                                        <h5>信仰之光——再见撒旦</h5>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="row tab3">
+                                                <img src="../images/头像4.jpg" height="35px">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="row tab8">
+                                                <h6>阿天Sam</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="tabBox">
+                            <div class="row">
+                                <a href=""><img src="../images/热门在线频道4-01.png" width="280px"></a>
+                            </div>
+                            <div class="row tab1">
+                                <div class="col-md-10">
+                                    <div class="row tab7">
+                                        <h5>机械虫来袭！</h5>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="row tab3">
+                                                <img src="../images/头像5.jpg" height="35px">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="row tab8">
+                                                <h6>JimRsNg</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="tabBox">
+                            <div class="row">
+                                <a href=""><img src="../images/热门在线频道5-01.png" width="280px"></a>
+                            </div>
+                            <div class="row tab1">
+                                <div class="col-md-10">
+                                    <div class="row tab7">
+                                        <h5>NARUTO・BORUTO登场的忍术</h5>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="row tab3">
+                                                <img src="../images/头像6.jpg" height="35px">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="row tab8">
+                                                <h6>东家的木耳</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="tabBox">
+                            <div class="row">
+                                <a href=""><img src="../images/视频封面图7-01.png" width="280px"></a>
+                            </div>
+                            <div class="row tab1">
+                                <div class="col-md-10">
+                                    <div class="row tab7">
+                                        <h5>A new devil's come to town</h5>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="row tab3">
+                                                <img src="../images/头像7.jpg" height="35px">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="row tab8">
+                                                <h6>丁特</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="tabBox">
+                            <div class="row">
+                                <a href=""><img src="../images/视频封面图8-01.png" width="280px"></a>
+                            </div>
+                            <div class="row tab1">
+                                <div class="col-md-10">
+                                    <div class="row tab7">
+                                        <h5>我的世界海洋之约</h5>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="row tab3">
+                                                <img src="../images/头像8.jpg" height="35px">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="row tab8">
+                                                <h6>Archer</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row tabPage">
+                    <ul class="pagination">
+                        <li class="disabled"><a href="#">上一页</a></li>
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">下一页</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="xjzb">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="tabBox">
+                            <div class="row">
+                                <a href=""><img src="../images/热门在线频道4-01.png" width="280px"></a>
+                            </div>
+                            <div class="row tab1">
+                                <div class="col-md-10">
+                                    <div class="row tab7">
+                                        <h5>机械虫来袭！</h5>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="row tab3">
+                                                <img src="../images/头像5.jpg" height="35px">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="row tab8">
+                                                <h6>JimRsNg</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="tabBox">
+                            <div class="row">
+                                <a href=""><img src="../images/热门在线频道5-01.png" width="280px"></a>
+                            </div>
+                            <div class="row tab1">
+                                <div class="col-md-10">
+                                    <div class="row tab7">
+                                        <h5>NARUTO・BORUTO登场的忍术</h5>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="row tab3">
+                                                <img src="../images/头像6.jpg" height="35px">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="row tab8">
+                                                <h6>东家的木耳</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="tabBox">
+                            <div class="row">
+                                <a href=""><img src="../images/视频封面图7-01.png" width="280px"></a>
+                            </div>
+                            <div class="row tab1">
+                                <div class="col-md-10">
+                                    <div class="row tab7">
+                                        <h5>A new devil's come to town</h5>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="row tab3">
+                                                <img src="../images/头像7.jpg" height="35px">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="row tab8">
+                                                <h6>丁特</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="tabBox">
+                            <div class="row">
+                                <a href=""><img src="../images/视频封面图8-01.png" width="280px"></a>
+                            </div>
+                            <div class="row tab1">
+                                <div class="col-md-10">
+                                    <div class="row tab7">
+                                        <h5>我的世界海洋之约</h5>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="row tab3">
+                                                <img src="../images/头像8.jpg" height="35px">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="row tab8">
+                                                <h6>Archer</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="tabBox">
+                            <div class="row">
+                                <a href=""><img src="../images/热门在线频道1-01.png" width="280px"></a>
+                            </div>
+                            <div class="row tab1">
+                                <div class="col-md-10">
+                                    <div class="row tab7">
+                                        <h5>7/9 宝藏猎人</h5>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="row tab3">
+                                                <img src="../images/头像1.jpg" height="35px">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="row tab8">
+                                                <h6>無口君</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="tabBox">
+                            <div class="row">
+                                <a href=""><img src="../images/热门在线频道2-01.png" width="280px"></a>
+                            </div>
+                            <div class="row tab1">
+                                <div class="col-md-10">
+                                    <div class="row tab7">
+                                        <h5>刺客信条编年史：俄罗斯</h5>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="row tab3">
+                                                <img src="../images/头像2.jpg" height="35px">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="row tab8">
+                                                <h6>卡古三鱼</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="tabBox">
+                            <div class="row">
+                                <a href=""><img src="../images/热门在线频道3-01.png" width="280px"></a>
+                            </div>
+                            <div class="row tab1">
+                                <div class="col-md-10">
+                                    <div class="row tab7">
+                                        <h5>万圣复刻会是阿邢的机会吗</h5>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="row tab3">
+                                                <img src="../images/头像3.jpg" height="35px">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="row tab8">
+                                                <h6>乌鸦坐飞姬</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="tabBox">
+                            <div class="row">
+                                <a href=""><img src="../images/热门在线频道6-01.png" width="280px"></a>
+                            </div>
+                            <div class="row tab1">
+                                <div class="col-md-10">
+                                    <div class="row tab7">
+                                        <h5>信仰之光——再见撒旦</h5>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="row tab3">
+                                                <img src="../images/头像4.jpg" height="35px">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="row tab8">
+                                                <h6>阿天Sam</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row tabPage">
+                    <ul class="pagination">
+                        <li class="disabled"><a href="#">上一页</a></li>
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">下一页</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="lmsj">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="tabBox">
+                            <div class="row">
+                                <a href=""><img src="../images/热门在线频道1-01.png" width="280px"></a>
+                            </div>
+                            <div class="row tab1">
+                                <div class="col-md-10">
+                                    <div class="row tab7">
+                                        <h5>7/9 宝藏猎人</h5>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="row tab3">
+                                                <img src="../images/头像1.jpg" height="35px">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="row tab8">
+                                                <h6>無口君</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="tabBox">
+                            <div class="row">
+                                <a href=""><img src="../images/热门在线频道2-01.png" width="280px"></a>
+                            </div>
+                            <div class="row tab1">
+                                <div class="col-md-10">
+                                    <div class="row tab7">
+                                        <h5>刺客信条编年史：俄罗斯</h5>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="row tab3">
+                                                <img src="../images/头像2.jpg" height="35px">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="row tab8">
+                                                <h6>卡古三鱼</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="tabBox">
+                            <div class="row">
+                                <a href=""><img src="../images/热门在线频道3-01.png" width="280px"></a>
+                            </div>
+                            <div class="row tab1">
+                                <div class="col-md-10">
+                                    <div class="row tab7">
+                                        <h5>万圣复刻会是阿邢的机会吗</h5>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="row tab3">
+                                                <img src="../images/头像3.jpg" height="35px">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="row tab8">
+                                                <h6>乌鸦坐飞姬</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="tabBox">
+                            <div class="row">
+                                <a href=""><img src="../images/热门在线频道6-01.png" width="280px"></a>
+                            </div>
+                            <div class="row tab1">
+                                <div class="col-md-10">
+                                    <div class="row tab7">
+                                        <h5>信仰之光——再见撒旦</h5>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="row tab3">
+                                                <img src="../images/头像4.jpg" height="35px">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="row tab8">
+                                                <h6>阿天Sam</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="tabBox">
+                            <div class="row">
+                                <a href=""><img src="../images/热门在线频道1-01.png" width="280px"></a>
+                            </div>
+                            <div class="row tab1">
+                                <div class="col-md-10">
+                                    <div class="row tab7">
+                                        <h5>7/9 宝藏猎人</h5>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="row tab3">
+                                                <img src="../images/头像1.jpg" height="35px">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="row tab8">
+                                                <h6>無口君</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="tabBox">
+                            <div class="row">
+                                <a href=""><img src="../images/热门在线频道2-01.png" width="280px"></a>
+                            </div>
+                            <div class="row tab1">
+                                <div class="col-md-10">
+                                    <div class="row tab7">
+                                        <h5>刺客信条编年史：俄罗斯</h5>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="row tab3">
+                                                <img src="../images/头像2.jpg" height="35px">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="row tab8">
+                                                <h6>卡古三鱼</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="tabBox">
+                            <div class="row">
+                                <a href=""><img src="../images/热门在线频道3-01.png" width="280px"></a>
+                            </div>
+                            <div class="row tab1">
+                                <div class="col-md-10">
+                                    <div class="row tab7">
+                                        <h5>万圣复刻会是阿邢的机会吗</h5>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="row tab3">
+                                                <img src="../images/头像3.jpg" height="35px">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="row tab8">
+                                                <h6>乌鸦坐飞姬</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="tabBox">
+                            <div class="row">
+                                <a href=""><img src="../images/热门在线频道6-01.png" width="280px"></a>
+                            </div>
+                            <div class="row tab1">
+                                <div class="col-md-10">
+                                    <div class="row tab7">
+                                        <h5>信仰之光——再见撒旦</h5>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="row tab3">
+                                                <img src="../images/头像4.jpg" height="35px">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="row tab8">
+                                                <h6>阿天Sam</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row tabPage">
+                    <ul class="pagination">
+                        <li class="disabled"><a href="#">上一页</a></li>
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">下一页</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="Dota">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="tabBox">
+                            <div class="row">
+                                <a href=""><img src="../images/热门在线频道4-01.png" width="280px"></a>
+                            </div>
+                            <div class="row tab1">
+                                <div class="col-md-10">
+                                    <div class="row tab7">
+                                        <h5>机械虫来袭！</h5>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="row tab3">
+                                                <img src="../images/头像5.jpg" height="35px">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="row tab8">
+                                                <h6>JimRsNg</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="tabBox">
+                            <div class="row">
+                                <a href=""><img src="../images/热门在线频道5-01.png" width="280px"></a>
+                            </div>
+                            <div class="row tab1">
+                                <div class="col-md-10">
+                                    <div class="row tab7">
+                                        <h5>NARUTO・BORUTO登场的忍术</h5>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="row tab3">
+                                                <img src="../images/头像6.jpg" height="35px">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="row tab8">
+                                                <h6>东家的木耳</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="tabBox">
+                            <div class="row">
+                                <a href=""><img src="../images/视频封面图7-01.png" width="280px"></a>
+                            </div>
+                            <div class="row tab1">
+                                <div class="col-md-10">
+                                    <div class="row tab7">
+                                        <h5>A new devil's come to town</h5>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="row tab3">
+                                                <img src="../images/头像7.jpg" height="35px">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="row tab8">
+                                                <h6>丁特</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="tabBox">
+                            <div class="row">
+                                <a href=""><img src="../images/视频封面图8-01.png" width="280px"></a>
+                            </div>
+                            <div class="row tab1">
+                                <div class="col-md-10">
+                                    <div class="row tab7">
+                                        <h5>我的世界海洋之约</h5>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="row tab3">
+                                                <img src="../images/头像8.jpg" height="35px">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="row tab8">
+                                                <h6>Archer</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="tabBox">
+                            <div class="row">
+                                <a href=""><img src="../images/热门在线频道1-01.png" width="280px"></a>
+                            </div>
+                            <div class="row tab1">
+                                <div class="col-md-10">
+                                    <div class="row tab7">
+                                        <h5>7/9 宝藏猎人</h5>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="row tab3">
+                                                <img src="../images/头像1.jpg" height="35px">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="row tab8">
+                                                <h6>無口君</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="tabBox">
+                            <div class="row">
+                                <a href=""><img src="../images/热门在线频道2-01.png" width="280px"></a>
+                            </div>
+                            <div class="row tab1">
+                                <div class="col-md-10">
+                                    <div class="row tab7">
+                                        <h5>刺客信条编年史：俄罗斯</h5>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="row tab3">
+                                                <img src="../images/头像2.jpg" height="35px">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="row tab8">
+                                                <h6>卡古三鱼</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="tabBox">
+                            <div class="row">
+                                <a href=""><img src="../images/热门在线频道3-01.png" width="280px"></a>
+                            </div>
+                            <div class="row tab1">
+                                <div class="col-md-10">
+                                    <div class="row tab7">
+                                        <h5>万圣复刻会是阿邢的机会吗</h5>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="row tab3">
+                                                <img src="../images/头像3.jpg" height="35px">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="row tab8">
+                                                <h6>乌鸦坐飞姬</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="tabBox">
+                            <div class="row">
+                                <a href=""><img src="../images/热门在线频道6-01.png" width="280px"></a>
+                            </div>
+                            <div class="row tab1">
+                                <div class="col-md-10">
+                                    <div class="row tab7">
+                                        <h5>信仰之光——再见撒旦</h5>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="row tab3">
+                                                <img src="../images/头像4.jpg" height="35px">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="row tab8">
+                                                <h6>阿天Sam</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row tabPage">
+                    <ul class="pagination">
+                        <li class="disabled"><a href="#">上一页</a></li>
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">下一页</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="ckxt">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="tabBox">
+                            <div class="row">
+                                <a href=""><img src="../images/热门在线频道1-01.png" width="280px"></a>
+                            </div>
+                            <div class="row tab1">
+                                <div class="col-md-10">
+                                    <div class="row tab7">
+                                        <h5>7/9 宝藏猎人</h5>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="row tab3">
+                                                <img src="../images/头像1.jpg" height="35px">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="row tab8">
+                                                <h6>無口君</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="tabBox">
+                            <div class="row">
+                                <a href=""><img src="../images/热门在线频道2-01.png" width="280px"></a>
+                            </div>
+                            <div class="row tab1">
+                                <div class="col-md-10">
+                                    <div class="row tab7">
+                                        <h5>刺客信条编年史：俄罗斯</h5>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="row tab3">
+                                                <img src="../images/头像2.jpg" height="35px">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="row tab8">
+                                                <h6>卡古三鱼</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="tabBox">
+                            <div class="row">
+                                <a href=""><img src="../images/热门在线频道3-01.png" width="280px"></a>
+                            </div>
+                            <div class="row tab1">
+                                <div class="col-md-10">
+                                    <div class="row tab7">
+                                        <h5>万圣复刻会是阿邢的机会吗</h5>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="row tab3">
+                                                <img src="../images/头像3.jpg" height="35px">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="row tab8">
+                                                <h6>乌鸦坐飞姬</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="tabBox">
+                            <div class="row">
+                                <a href=""><img src="../images/热门在线频道6-01.png" width="280px"></a>
+                            </div>
+                            <div class="row tab1">
+                                <div class="col-md-10">
+                                    <div class="row tab7">
+                                        <h5>信仰之光——再见撒旦</h5>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="row tab3">
+                                                <img src="../images/头像4.jpg" height="35px">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="row tab8">
+                                                <h6>阿天Sam</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="tabBox">
+                            <div class="row">
+                                <a href=""><img src="../images/热门在线频道1-01.png" width="280px"></a>
+                            </div>
+                            <div class="row tab1">
+                                <div class="col-md-10">
+                                    <div class="row tab7">
+                                        <h5>7/9 宝藏猎人</h5>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="row tab3">
+                                                <img src="../images/头像1.jpg" height="35px">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="row tab8">
+                                                <h6>無口君</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="tabBox">
+                            <div class="row">
+                                <a href=""><img src="../images/热门在线频道2-01.png" width="280px"></a>
+                            </div>
+                            <div class="row tab1">
+                                <div class="col-md-10">
+                                    <div class="row tab7">
+                                        <h5>刺客信条编年史：俄罗斯</h5>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="row tab3">
+                                                <img src="../images/头像2.jpg" height="35px">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="row tab8">
+                                                <h6>卡古三鱼</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="tabBox">
+                            <div class="row">
+                                <a href=""><img src="../images/热门在线频道3-01.png" width="280px"></a>
+                            </div>
+                            <div class="row tab1">
+                                <div class="col-md-10">
+                                    <div class="row tab7">
+                                        <h5>万圣复刻会是阿邢的机会吗</h5>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="row tab3">
+                                                <img src="../images/头像3.jpg" height="35px">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="row tab8">
+                                                <h6>乌鸦坐飞姬</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="tabBox">
+                            <div class="row">
+                                <a href=""><img src="../images/热门在线频道6-01.png" width="280px"></a>
+                            </div>
+                            <div class="row tab1">
+                                <div class="col-md-10">
+                                    <div class="row tab7">
+                                        <h5>信仰之光——再见撒旦</h5>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="row tab3">
+                                                <img src="../images/头像4.jpg" height="35px">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="row tab8">
+                                                <h6>阿天Sam</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row tabPage">
+                    <ul class="pagination">
+                        <li class="disabled"><a href="#">上一页</a></li>
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">下一页</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="hyrzfrz">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="tabBox">
+                            <div class="row">
+                                <a href=""><img src="../images/热门在线频道1-01.png" width="280px"></a>
+                            </div>
+                            <div class="row tab1">
+                                <div class="col-md-10">
+                                    <div class="row tab7">
+                                        <h5>7/9 宝藏猎人</h5>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="row tab3">
+                                                <img src="../images/头像1.jpg" height="35px">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="row tab8">
+                                                <h6>無口君</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="tabBox">
+                            <div class="row">
+                                <a href=""><img src="../images/热门在线频道2-01.png" width="280px"></a>
+                            </div>
+                            <div class="row tab1">
+                                <div class="col-md-10">
+                                    <div class="row tab7">
+                                        <h5>刺客信条编年史：俄罗斯</h5>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="row tab3">
+                                                <img src="../images/头像2.jpg" height="35px">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="row tab8">
+                                                <h6>卡古三鱼</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="tabBox">
+                            <div class="row">
+                                <a href=""><img src="../images/热门在线频道3-01.png" width="280px"></a>
+                            </div>
+                            <div class="row tab1">
+                                <div class="col-md-10">
+                                    <div class="row tab7">
+                                        <h5>万圣复刻会是阿邢的机会吗</h5>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="row tab3">
+                                                <img src="../images/头像3.jpg" height="35px">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="row tab8">
+                                                <h6>乌鸦坐飞姬</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="tabBox">
+                            <div class="row">
+                                <a href=""><img src="../images/热门在线频道6-01.png" width="280px"></a>
+                            </div>
+                            <div class="row tab1">
+                                <div class="col-md-10">
+                                    <div class="row tab7">
+                                        <h5>信仰之光——再见撒旦</h5>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="row tab3">
+                                                <img src="../images/头像4.jpg" height="35px">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="row tab8">
+                                                <h6>阿天Sam</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="tabBox">
+                            <div class="row">
+                                <a href=""><img src="../images/热门在线频道1-01.png" width="280px"></a>
+                            </div>
+                            <div class="row tab1">
+                                <div class="col-md-10">
+                                    <div class="row tab7">
+                                        <h5>7/9 宝藏猎人</h5>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="row tab3">
+                                                <img src="../images/头像1.jpg" height="35px">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="row tab8">
+                                                <h6>無口君</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="tabBox">
+                            <div class="row">
+                                <a href=""><img src="../images/热门在线频道2-01.png" width="280px"></a>
+                            </div>
+                            <div class="row tab1">
+                                <div class="col-md-10">
+                                    <div class="row tab7">
+                                        <h5>刺客信条编年史：俄罗斯</h5>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="row tab3">
+                                                <img src="../images/头像2.jpg" height="35px">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="row tab8">
+                                                <h6>卡古三鱼</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="tabBox">
+                            <div class="row">
+                                <a href=""><img src="../images/热门在线频道3-01.png" width="280px"></a>
+                            </div>
+                            <div class="row tab1">
+                                <div class="col-md-10">
+                                    <div class="row tab7">
+                                        <h5>万圣复刻会是阿邢的机会吗</h5>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="row tab3">
+                                                <img src="../images/头像3.jpg" height="35px">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="row tab8">
+                                                <h6>乌鸦坐飞姬</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="tabBox">
+                            <div class="row">
+                                <a href=""><img src="../images/热门在线频道6-01.png" width="280px"></a>
+                            </div>
+                            <div class="row tab1">
+                                <div class="col-md-10">
+                                    <div class="row tab7">
+                                        <h5>信仰之光——再见撒旦</h5>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="row tab3">
+                                                <img src="../images/头像4.jpg" height="35px">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="row tab8">
+                                                <h6>阿天Sam</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row tabPage">
+                    <ul class="pagination">
+                        <li class="disabled"><a href="#">上一页</a></li>
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">下一页</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="fgo">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="tabBox">
+                            <div class="row">
+                                <a href=""><img src="../images/热门在线频道4-01.png" width="280px"></a>
+                            </div>
+                            <div class="row tab1">
+                                <div class="col-md-10">
+                                    <div class="row tab7">
+                                        <h5>机械虫来袭！</h5>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="row tab3">
+                                                <img src="../images/头像5.jpg" height="35px">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="row tab8">
+                                                <h6>JimRsNg</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="tabBox">
+                            <div class="row">
+                                <a href=""><img src="../images/热门在线频道5-01.png" width="280px"></a>
+                            </div>
+                            <div class="row tab1">
+                                <div class="col-md-10">
+                                    <div class="row tab7">
+                                        <h5>NARUTO・BORUTO登场的忍术</h5>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="row tab3">
+                                                <img src="../images/头像6.jpg" height="35px">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="row tab8">
+                                                <h6>东家的木耳</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="tabBox">
+                            <div class="row">
+                                <a href=""><img src="../images/视频封面图7-01.png" width="280px"></a>
+                            </div>
+                            <div class="row tab1">
+                                <div class="col-md-10">
+                                    <div class="row tab7">
+                                        <h5>A new devil's come to town</h5>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="row tab3">
+                                                <img src="../images/头像7.jpg" height="35px">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="row tab8">
+                                                <h6>丁特</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="tabBox">
+                            <div class="row">
+                                <a href=""><img src="../images/视频封面图8-01.png" width="280px"></a>
+                            </div>
+                            <div class="row tab1">
+                                <div class="col-md-10">
+                                    <div class="row tab7">
+                                        <h5>我的世界海洋之约</h5>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="row tab3">
+                                                <img src="../images/头像8.jpg" height="35px">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="row tab8">
+                                                <h6>Archer</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="tabBox">
+                            <div class="row">
+                                <a href=""><img src="../images/热门在线频道1-01.png" width="280px"></a>
+                            </div>
+                            <div class="row tab1">
+                                <div class="col-md-10">
+                                    <div class="row tab7">
+                                        <h5>7/9 宝藏猎人</h5>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="row tab3">
+                                                <img src="../images/头像1.jpg" height="35px">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="row tab8">
+                                                <h6>無口君</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="tabBox">
+                            <div class="row">
+                                <a href=""><img src="../images/热门在线频道2-01.png" width="280px"></a>
+                            </div>
+                            <div class="row tab1">
+                                <div class="col-md-10">
+                                    <div class="row tab7">
+                                        <h5>刺客信条编年史：俄罗斯</h5>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="row tab3">
+                                                <img src="../images/头像2.jpg" height="35px">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="row tab8">
+                                                <h6>卡古三鱼</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="tabBox">
+                            <div class="row">
+                                <a href=""><img src="../images/热门在线频道3-01.png" width="280px"></a>
+                            </div>
+                            <div class="row tab1">
+                                <div class="col-md-10">
+                                    <div class="row tab7">
+                                        <h5>万圣复刻会是阿邢的机会吗</h5>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="row tab3">
+                                                <img src="../images/头像3.jpg" height="35px">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="row tab8">
+                                                <h6>乌鸦坐飞姬</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="tabBox">
+                            <div class="row">
+                                <a href=""><img src="../images/热门在线频道6-01.png" width="280px"></a>
+                            </div>
+                            <div class="row tab1">
+                                <div class="col-md-10">
+                                    <div class="row tab7">
+                                        <h5>信仰之光——再见撒旦</h5>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="row tab3">
+                                                <img src="../images/头像4.jpg" height="35px">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="row tab8">
+                                                <h6>阿天Sam</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row tabPage">
+                    <ul class="pagination">
+                        <li class="disabled"><a href="#">上一页</a></li>
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">下一页</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="tekken">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="tabBox">
+                            <div class="row">
+                                <a href=""><img src="../images/热门在线频道4-01.png" width="280px"></a>
+                            </div>
+                            <div class="row tab1">
+                                <div class="col-md-10">
+                                    <div class="row tab7">
+                                        <h5>机械虫来袭！</h5>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="row tab3">
+                                                <img src="../images/头像5.jpg" height="35px">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="row tab8">
+                                                <h6>JimRsNg</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="tabBox">
+                            <div class="row">
+                                <a href=""><img src="../images/热门在线频道5-01.png" width="280px"></a>
+                            </div>
+                            <div class="row tab1">
+                                <div class="col-md-10">
+                                    <div class="row tab7">
+                                        <h5>NARUTO・BORUTO登场的忍术</h5>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="row tab3">
+                                                <img src="../images/头像6.jpg" height="35px">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="row tab8">
+                                                <h6>东家的木耳</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="tabBox">
+                            <div class="row">
+                                <a href=""><img src="../images/视频封面图7-01.png" width="280px"></a>
+                            </div>
+                            <div class="row tab1">
+                                <div class="col-md-10">
+                                    <div class="row tab7">
+                                        <h5>A new devil's come to town</h5>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="row tab3">
+                                                <img src="../images/头像7.jpg" height="35px">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="row tab8">
+                                                <h6>丁特</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="tabBox">
+                            <div class="row">
+                                <a href=""><img src="../images/视频封面图8-01.png" width="280px"></a>
+                            </div>
+                            <div class="row tab1">
+                                <div class="col-md-10">
+                                    <div class="row tab7">
+                                        <h5>我的世界海洋之约</h5>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="row tab3">
+                                                <img src="../images/头像8.jpg" height="35px">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="row tab8">
+                                                <h6>Archer</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="tabBox">
+                            <div class="row">
+                                <a href=""><img src="../images/热门在线频道1-01.png" width="280px"></a>
+                            </div>
+                            <div class="row tab1">
+                                <div class="col-md-10">
+                                    <div class="row tab7">
+                                        <h5>7/9 宝藏猎人</h5>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="row tab3">
+                                                <img src="../images/头像1.jpg" height="35px">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="row tab8">
+                                                <h6>無口君</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="tabBox">
+                            <div class="row">
+                                <a href=""><img src="../images/热门在线频道2-01.png" width="280px"></a>
+                            </div>
+                            <div class="row tab1">
+                                <div class="col-md-10">
+                                    <div class="row tab7">
+                                        <h5>刺客信条编年史：俄罗斯</h5>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="row tab3">
+                                                <img src="../images/头像2.jpg" height="35px">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="row tab8">
+                                                <h6>卡古三鱼</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="tabBox">
+                            <div class="row">
+                                <a href=""><img src="../images/热门在线频道3-01.png" width="280px"></a>
+                            </div>
+                            <div class="row tab1">
+                                <div class="col-md-10">
+                                    <div class="row tab7">
+                                        <h5>万圣复刻会是阿邢的机会吗</h5>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="row tab3">
+                                                <img src="../images/头像3.jpg" height="35px">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="row tab8">
+                                                <h6>乌鸦坐飞姬</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="tabBox">
+                            <div class="row">
+                                <a href=""><img src="../images/热门在线频道6-01.png" width="280px"></a>
+                            </div>
+                            <div class="row tab1">
+                                <div class="col-md-10">
+                                    <div class="row tab7">
+                                        <h5>信仰之光——再见撒旦</h5>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="row tab3">
+                                                <img src="../images/头像4.jpg" height="35px">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="row tab8">
+                                                <h6>阿天Sam</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row tabPage">
+                    <ul class="pagination">
+                        <li class="disabled"><a href="#">上一页</a></li>
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">下一页</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        </div>
+</div>
+
+<!--版尾-->
+<div id="version">
+    <div class="container" id="version2">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="row">
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;友情链接 / LINKS</p>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-6">
+                        <ul>
+                            <li><a href="https://my.163.com/">-&nbsp;&nbsp;&nbsp;网易游戏</a></li>
+                            <li><a href="https://www.douyu.com/">-&nbsp;&nbsp;&nbsp;斗鱼直播</a></li>
+                            <li><a href="http://www.huya.com/">-&nbsp;&nbsp;&nbsp;虎牙直播</a></li>
+                            <li><a href="https://www.gamersky.com/">-&nbsp;&nbsp;&nbsp;游客星空</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <ul>
+                            <li><a href="http://www.shouyou.com/">-&nbsp;&nbsp;&nbsp;手游</a></li>
+                            <li><a href="http://www.yy.com/">-&nbsp;&nbsp;&nbsp;YY直播</a></li>
+                            <li><a href="https://egame.qq.com/">-&nbsp;&nbsp;&nbsp;企鹅直播</a></li>
+                            <li><a href="http://www.4399.com/">-&nbsp;&nbsp;&nbsp;4399</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <img src="../images/logo.png" height="160px">
+            </div>
+            <div class="col-md-3">
+                <div class="row" id="vp1">
+                    <p>关于我们 / ABOUTS</p>
+                    <p><sup>__________</sup></p>
+                </div>
+                <div class="row" id="vp2">
+                    <p class="vp">我们来自五湖四海、但共同的目标孕育着同一个理想</p>
+                    <p class="vp">出发点不同但目的地一样，年轻的新心在这一刻相聚</p>
+                    <p class="vp">团结一致、不离不弃，斩破风浪、勇敢起航</p>
+                </div>
+                <div class="row" id="vp3">
+                    <img src="../images/v1.png" height="30px">
+                    <img src="../images/v2.png" height="30px">
+                    <img src="../images/v3.png" height="30px">
+                    <img src="../images/v4.png" height="30px">
+                    <img src="../images/v5.png" height="30px">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../js/gulu1.js"></script>
+<script src="../js/jquery-3.3.1.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<!--<script src="http://cdn.bootcss.com/jquery/1.11.0/jquery.min.js" type="text/javascript"></script>-->
+<script>
+    // 二级导航
+    $(function () {
+        $("#classifyId").popover({placement: 'bottom', trigger: 'focus'});
+        $("#aboutId").popover({placement: 'bottom', trigger: 'focus'});
+    });
+</script>
+</body>
+</html>

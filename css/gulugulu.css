@@ -19,13 +19,14 @@ body{
 /*导航栏*/
 #nav{
     padding-top: 5px;
-    padding-bottom: 5px;
+    /*padding-bottom: 5px;*/
     padding-left: 10px;
     padding-right: 10px;
     background-color: #6950A1;
 }
 #nav a:visited{ background-color: #6950A1; text-decoration: none;}
 #nav a:focus{ color: #c77eb5; text-decoration: none;}
+#nav .container-f .navLeft ul{padding-left: 35px;}
 #nav .container-f .navLeft ul li{
     padding-left: 10px;
     padding-right: 10px;
@@ -35,7 +36,7 @@ body{
 }
 #nav ul li a{
     color: white;
-    font-size: medium;
+    font-size: large;
 }
 #nav ul li a:hover,#nav .container-f ul li button:hover{
     color: #c77eb5;
@@ -60,6 +61,7 @@ body{
     margin-right: 20px;
 }
 #nav .container-f form .input-group{
+    width: 350px;
     border: solid 1px black;
     border-radius: 2px;
 }
@@ -123,8 +125,8 @@ table { border-collapse:collapse; border-spacing:0; }
 }
 #myModal .modal-content .modalLand .form-group .col-sm-9 .input2{
     border:solid 1px #6950A1;
-    border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
     height: 33px;
 }
 #myModal .modal-content .modalLand form .form-group,#myModal2 .modal-content .modalLand form .form-group{
@@ -260,7 +262,7 @@ table { border-collapse:collapse; border-spacing:0; }
     /*width: 27%;*/
     padding-left: 5px;
     padding-right: 5px;
-    background-color: #F9D3D4;
+    /*background-color: #F9D3D4;*/
     color: black;
     font-size: x-large;
     line-height: 30px;
@@ -292,7 +294,7 @@ table { border-collapse:collapse; border-spacing:0; }
 #trailer #trailerContent #trailerContent2,#trailer #trailerContent3 #trailerContent22{
     margin-top: 13px;
     margin-left: 10px;
-    background-color: #F9D3D4;
+    /*background-color: #F9D3D4;*/
     color: black;
     font-size: x-large;
     float: left;
@@ -377,7 +379,7 @@ table { border-collapse:collapse; border-spacing:0; }
 #trailer #trailerContent3 #panelContent .yuGao a{
     font-size: medium;
     color: white;
-    background-color: #F9D3D4;
+    /*background-color: #F9D3D4;*/
     position: relative;
     left: 190px;
     top: -28px;
@@ -418,7 +420,7 @@ table { border-collapse:collapse; border-spacing:0; }
 }
 #hotOnline #hotOnlineContent .col-md-5 p{
     margin-top: 13px;
-    background-color: #F9D3D4;
+    /*background-color: #F9D3D4;*/
     color: black;
     padding-left: 0;
     margin-left: 0;
@@ -427,7 +429,7 @@ table { border-collapse:collapse; border-spacing:0; }
 }
 #hotOnline .hotOnlineContent2{
     margin-top: 10px;
-    text-align: center;
+    /*text-align: center;*/
 }
 #hotOnline .hotOnlineContent2 .col-md-4 .hotBox{
     background-color: white;
@@ -450,18 +452,20 @@ table { border-collapse:collapse; border-spacing:0; }
     margin: 0;
 }
 #hotOnline .hotOnlineContent2 h4{
-    padding: 0;
-    background-color: #F9D3D4;
+    padding-top: 10px;
+    padding-left: 10px;
+    /*background-color: #F9D3D4;*/
     color: black;
 }
-#hotOnline .hotOnlineContent2 .col-md-7 .col-md-3 img{
+#hotOnline .hotOnlineContent2 .col-md-10 .col-md-3 img{
     margin-left: 20px;
     margin-bottom: 15px;
     border-radius: 25px;
 }
-#hotOnline .hotOnlineContent2 .col-md-7 .col-md-8 p{
+#hotOnline .hotOnlineContent2 .col-md-10 .col-md-8 p{
     color: #848484;
     padding-top: 10px;
+    /*padding-left: 25px;*/
 }
 
 /*版尾*/

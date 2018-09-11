@@ -10,7 +10,7 @@ a:focus{text-decoration: none; color: #8552a1;outline: none;}
 
 /* nav */
 /*.navLayout{width: 580px;background-color: yellow; height: 670px;}*/
-.navLive{width:210px;height: 670px;background: #17141f;transition: all .1s; position: absolute;top:62px;left: 0; padding-left: 5px; z-index: 12;}
+.navLive{width:210px;height: 670px;background: #17141f;transition: all .1s; position: absolute;top:60px;left: 0; padding-left: 5px; z-index: 12;}
 .navLive a{display: block;overflow: hidden;padding-left: 24px;line-height: 28px;max-height: 46px;color: #ABB1B7;transition: all .1s;z-index: 4}
 .navLive a:hover{ text-decoration: none; color: #8e4f97}
 .navLive .navStyle span{border-left: solid 2px #8e4f97;padding-left: 10px}
