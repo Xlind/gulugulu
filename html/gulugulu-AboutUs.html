@@ -30,6 +30,9 @@
             width: 100%;
             background-color: #2b542c;
         }
+        #aboutUs .col-md-5{
+            margin-top: 15px;
+        }
         #aboutUs .abImg img{
             height: 20px;
             margin-top: 5px;
@@ -38,37 +41,35 @@
         #aboutUs .abImg .col-md-7{
             padding-left: 0;
         }
-        #aboutUs #xy{
+        #aboutUs #xy, #aboutUs #ld,#aboutUs #wbb,#aboutUs #yml{
             padding-top: 60px;
             padding-bottom: 60px;
-            background-color: #e8eaf6;
             padding-left: 30px;
             padding-right: 30px;
         }
-        #aboutUs #xy .col-md-5 img{
-
-        }
-        #aboutUs #xy p{
+        #aboutUs #xy{background-color: #e8eaf6;color: black;}
+        #aboutUs #ld{background-color: #9fa8da; color: white;}
+        #aboutUs #wbb{background-color: #776ea7;color: white;}
+        #aboutUs #yml{background-color: #fff59d; color: black;}
+        #aboutUs p{
           margin: 0;
         }
-        #aboutUs #xy .pElement{
+        #aboutUs .pElement{
             margin-top: 15px;
             margin-bottom: 15px;
             line-height: 25px;
-            color:#424242;
         }
-        #aboutUs #xy hr{
+        #aboutUs #xy .pElement{color:#424242;}
+        #aboutUs #ld .pElement{color: white;}
+        #aboutUs #wbb .pElement{color: white;}
+        #aboutUs #yml .pElement{color: black;}
+        #aboutUs hr{
             margin: 0;
-            /*border: none;*/
-            /*border-top: */
-            /*background-color: #686868;*/
+            height: 1px;
+            background-color: #b0b0b0;
         }
-        #aboutUs #xy .abFavour{
+        #aboutUs .abFavour{
             margin-top: 10px;
-        }
-        #aboutUs #ld{
-            background-color: #9fa8da;
-            height: 300px;
         }
     </style>
 </head>
@@ -300,7 +301,7 @@
         <div class="col-md-5"><img src="../images/个人1-01%20.png" height="250px"></div>
         <div class="col-md-7">
             <div class="row ab">
-            <h4>Melonmelon</h4>
+            <h3>Melonmelon</h3>
             <p>UI设计</p>
             </div>
             <div class="row abImg">
@@ -325,8 +326,96 @@
             </div>
         </div>
     </div>
-    <div class="col-md-6" id="ld"></div>
+    <div class="col-md-6" id="ld">
+        <div class="col-md-5"><img src="../images/个人2-01.png" height="250px"></div>
+        <div class="col-md-7">
+            <div class="row ab">
+                <h3>Xiao铛铛</h3>
+                <p>前端开发</p>
+            </div>
+            <div class="row abImg">
+                <div class="col-md-7">
+                    <img src="../images/联系方式2-1.png">&nbsp;&nbsp;<img src="../images/联系方式2-2.png">
+                    <hr />
+                </div>
+            </div>
+            <div class="row">
+                <p class="pElement">根据设计图为网站上提供的产品和服务实现Web界面，优化代码
+                    并保持良好兼容性。Web前端表现层及与前后端交互的架构设计
+                    和开发，配合后台开发人员实现产品界面和功能。利用各种Web
+                    技术模拟开发产品原型，Web新技术调研和资讯整理。</p>
+            </div>
+            <div class="row abImg">
+                <div class="col-md-7">
+                    <hr />
+                </div>
+            </div>
+            <div class="row abFavour">
+                <img src="../images/favour2.png" height="20px">
+            </div>
+        </div>
+    </div>
 </div>
+    <div class="row">
+        <div class="col-md-6" id="wbb">
+            <div class="col-md-5"><img src="../images/头像-01.png" height="250px"></div>
+            <div class="col-md-7">
+                <div class="row ab">
+                    <h3>吴菠菠</h3>
+                    <p>后端开发</p>
+                </div>
+                <div class="row abImg">
+                    <div class="col-md-7">
+                        <img src="../images/联系方式3-1.png">&nbsp;&nbsp;<img src="../images/联系方式3-2.png">
+                        <hr />
+                    </div>
+                </div>
+                <div class="row">
+                    <p class="pElement">根据网站需求考虑如何实现功能、数据的存取、平台的稳定性
+                        与性能等，与数据库进行交互以处理相应的业务逻辑。<br>
+                        负责网站的实时直播、评论、浏览历史的功能模块，并参与对
+                        项目的整合。</p>
+                </div>
+                <div class="row abImg">
+                    <div class="col-md-7">
+                        <hr />
+                    </div>
+                </div>
+                <div class="row abFavour">
+                    <img src="../images/favour3.png" height="20px">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6" id="yml">
+            <div class="col-md-5"><img src="../images/头像-01.png" height="250px"></div>
+            <div class="col-md-7">
+                <div class="row ab">
+                    <h3>MuLin</h3>
+                    <p>后端开发</p>
+                </div>
+                <div class="row abImg">
+                    <div class="col-md-7">
+                        <img src="../images/联系方式4-1.png">&nbsp;&nbsp;<img src="../images/联系方式4-2.png">
+                        <hr />
+                    </div>
+                </div>
+                <div class="row">
+                    <p class="pElement">根据网站需求考虑如何实现功能、数据的存取、平台的稳定性
+                        与性能等，与数据库进行交互以处理相应的业务逻辑。<br>
+                        负责网站的登录注册功能模块，数据库的设计与创建，后台
+                        功能的设计，并参与对项目的整合。</p>
+                </div>
+                <div class="row abImg">
+                    <div class="col-md-7">
+                        <hr />
+                    </div>
+                </div>
+                <div class="row abFavour">
+                    <img src="../images/favour4.png" height="20px">
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 <!--版尾-->
