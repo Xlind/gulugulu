@@ -1,255 +1,92 @@
-@font-face {
-	font-family: 'icomoon';
-	src:url('../fonts/icomoon.eot?rretjt');
-	src:url('../fonts/icomoon.eot?#iefixrretjt') format('embedded-opentype'),
-		url('../fonts/icomoon.woff?rretjt') format('woff'),
-		url('../fonts/icomoon.ttf?rretjt') format('truetype'),
-		url('../fonts/icomoon.svg?rretjt#icomoon') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
+@charset "utf-8";
+body{overflow-y: hidden;}
+body,html{background-color: #f6f5ec;}
+body,ul{margin:0;padding:0;}
+/*body{font:14px "微软雅黑","宋体","Arial Narrow",HELVETICA;-webkit-text-size-adjust:100%;}*/
+li{list-style:none}
+a{text-decoration:none;}
+a:hover{text-decoration: none;}
+a:focus{text-decoration: none; color: #8552a1;outline: none;}
 
-[class^="icon-"], [class*=" icon-"] {
-	font-family: 'icomoon';
-	speak: none;
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1;
+/* nav */
+/*.navLayout{width: 580px;background-color: yellow; height: 670px;}*/
+.navLive{width:210px;height: 670px;background: #17141f;transition: all .1s; position: absolute;top:60px;left: 0; padding-left: 5px; z-index: 12;}
+.navLive a{display: block;overflow: hidden;padding-left: 24px;line-height: 28px;max-height: 46px;color: #ABB1B7;transition: all .1s;z-index: 4}
+.navLive a:hover{ text-decoration: none; color: #8e4f97}
+.navLive .navStyle span{border-left: solid 2px #8e4f97;padding-left: 10px}
+.navLive .navLive-item .imgHidden{display: none;width: 60px; height: 35px;text-align: left;}
+.navLive .heng span{opacity: 0.2;}
+.navLive a span{margin-left: 10px;}
+.navLive-item{position: relative; width: 200px;}
+/*.navLive-item .ul-show{}*/
+.navLive-item ul li a img{padding-left: 6px;transition: all .1s;}
+.navLive-item ul li a span{font-size: x-small;}
+.navLive-item ul .liBox{padding-left: 20px; display: block;height: 35px;}
+.navLive-item ul li .li-item{width: 83px;text-align:center;font-size: small; background-color: #363636;border-radius: 3px;padding: 0;
+    margin-left: 5px;margin-top:5px;float: left;}
+/*.navLive-item.navLive-show{border-bottom: none;}*/
+.navLive-item ul{display: block;padding-top: 10px}
+.navLive-item.navLive-show ul{display: block;}
+/*.navLive-item>a:before{content: "";position: absolute;left: 0;width: 2px;height: 46px;background: #34A0CE;*/
+    /*opacity:0;text-decoration:none;transition: all .3s;}*/
+/*.navLive .navLive-icon{font-size: 20px;position: absolute;margin-left:-1px;}*/
+.navLive .navLive-item a {font-size: medium;}
+/* 此处修改导航图标 可自定义iconfont 替换*/
+.icon_1::after{content: "\e62b";}
+.icon_2::after{content: "\e669";}
+.icon_3::after{content: "\e61d";}
+/*---------------------*/
+/*.navLive-more{float:right;margin-right: 20px;font-size: 12px;transition: transform .3s;}*/
+/* 此处为导航右侧箭头 如果自定义iconfont 也需要替换*/
+/*.navLive-more::after{content: "\e621";}*/
+/*---------------------*/
+/*.navLive-show .navLive-more{transform:rotate(90deg);}*/
+/*.navLive-show .navLive-item>a:hover{color: #FFF;background:rgba(0,0,0,.1);}*/
+/*.navLive-show>a:before,.navLive-item>a:hover:before{opacity:1;}*/
+/*.navLive-item li:hover a{color: #FFF;background: rgba(0, 0, 0,.1);}*/
 
-	/* Better Font Rendering =========== */
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}
+/* nav-mini */
+#mini{position: absolute;left: 210px;top: 250px;transition: left 0.1s; z-index: 12;}
+.navLive-mini.navLive{width: 70px; z-index: 12;}
+/*.navLive-mini.navLive .navLive-icon{!* margin-left:-2px; *!}*/
+.navLive-mini.navLive .navLive-item .imgHidden{height: 30px;position: relative;display: block;}
+.navLive-mini.navLive .navLive-item>a span{display: none;}
+.navLive-mini.navLive .item-hidden{display: none;}
+/*.navLive-mini.navLive .navLive-more{margin-right: -20px;}*/
+.navLive-mini.navLive .navLive-item{padding-top: 40px;text-align: left;}
+.navLive-mini.navLive .navLive-item img{height: 35px;}
+.navLive-mini.navLive .navLive-item .item-img{position: relative;left: -4px;}
+.navLive-mini.navLive .navLive-item ul{position: absolute;top:0;left:60px;width: 180px;z-index: 99;overflow: hidden;}
+.navLive-mini.navLive a:hover{text-decoration: none;}
+/*.navLive-mini.navLive .navLive-item:hover{background:rgba(255,255,255,.1);}*/
+/*.navLive-mini.navLive .navLive-item:hover .navLive-item a{color:#FFF; text-decoration: none;}*/
+/*.navLive-mini.navLive .navLive-item:hover a:before{opacity:1;}*/
+.navLive-mini.navLive .navLive-item ul{display: none;}
+.navLive-mini.navLive .navLive-item:hover ul{display: none;}
+.navLive-mini.navLive #mini{position: absolute;left: 70px;top: 250px;transition: left 0.1s;z-index: 5;}
 
-body, html { font-size: 100%; 	padding: 0; margin: 0;}
-
-/* Reset */
-*,
-*:after,
-*:before {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-}
-
-/* Clearfix hack by Nicolas Gallagher: http://nicolasgallagher.com/micro-clearfix-hack/ */
-.clearfix:before,
-.clearfix:after {
-	content: " ";
-	display: table;
-}
-
-.clearfix:after {
-	clear: both;
-}
-
-body{
-	background: #494A5F;
-	color: #D5D6E2;
-	font-weight: 500;
-	font-size: 1.05em;
-	font-family: "Microsoft YaHei","Segoe UI", "Lucida Grande", Helvetica, Arial,sans-serif;
-}
-.htmleaf-links a{ color: rgba(255, 255, 255, 0.6);outline: none;text-decoration: none;-webkit-transition: 0.2s;transition: 0.2s;}
-.htmleaf-links a:hover,.htmleaf-links a:focus{color:#74777b;text-decoration: none;}
-.htmleaf-container{
-	margin: 0 auto;
-}
-
-.bgcolor-1 { background: #f0efee; }
-.bgcolor-2 { background: #f9f9f9; }
-.bgcolor-3 { background: #e8e8e8; }/*light grey*/
-.bgcolor-4 { background: #2f3238; color: #fff; }/*Dark grey*/
-.bgcolor-5 { background: #df6659; color: #521e18; }/*pink1*/
-.bgcolor-6 { background: #2fa8ec; }/*sky blue*/
-.bgcolor-7 { background: #d0d6d6; }/*White tea*/
-.bgcolor-8 { background: #3d4444; color: #fff; }/*Dark grey2*/
-.bgcolor-9 { background: #ef3f52; color: #fff;}/*pink2*/
-.bgcolor-10{ background: #64448f; color: #fff;}/*Violet*/
-.bgcolor-11{ background: #3755ad; color: #fff;}/*dark blue*/
-.bgcolor-12{ background: #3498DB; color: #fff;}/*light blue*/
-.bgcolor-20{ background: #494A5F;color: #D5D6E2;}
-/* Header */
-.htmleaf-header{
-	padding: 1em 190px 1em;
-	letter-spacing: -1px;
-	text-align: center;
-	background: #66677c;
-}
-.htmleaf-header h1 {
-	color: #D5D6E2;
-	font-weight: 600;
-	font-size: 2em;
-	line-height: 1;
-	margin-bottom: 0;
-}
-.htmleaf-header h1 span {
-	display: block;
-	font-size: 60%;
-	font-weight: 400;
-	padding: 0.8em 0 0.5em 0;
-	color: #c3c8cd;
-}
-/*nav*/
-.htmleaf-demo a{color: #fff;text-decoration: none;}
-.htmleaf-demo{width: 100%;padding-bottom: 1.2em;}
-.htmleaf-demo a{display: inline-block;margin: 0.5em;padding: 0.6em 1em;border: 3px solid #fff;font-weight: 700;}
-.htmleaf-demo a:hover{opacity: 0.6;}
-.htmleaf-demo a.current{background:#1d7db1;color: #fff; }
-/* Top Navigation Style */
-.htmleaf-links {
-	position: relative;
-	display: inline-block;
-	white-space: nowrap;
-	font-size: 1.5em;
-	text-align: center;
-}
-
-.htmleaf-links::after {
-	position: absolute;
-	top: 0;
-	left: 50%;
-	margin-left: -1px;
-	width: 2px;
-	height: 100%;
-	background: #dbdbdb;
-	content: '';
-	-webkit-transform: rotate3d(0,0,1,22.5deg);
-	transform: rotate3d(0,0,1,22.5deg);
-}
-
-.htmleaf-icon {
-	display: inline-block;
-	margin: 0.5em;
-	padding: 0em 0;
-	width: 1.5em;
-	text-decoration: none;
-}
-
-.htmleaf-icon span {
-	display: none;
-}
-
-.htmleaf-icon:before {
-	margin: 0 5px;
-	text-transform: none;
-	font-weight: normal;
-	font-style: normal;
-	font-variant: normal;
-	font-family: 'icomoon';
-	line-height: 1;
-	speak: none;
-	-webkit-font-smoothing: antialiased;
-}
-/* footer */
-.htmleaf-footer{width: 100%;padding-top: 10px;}
-.htmleaf-small{font-size: 0.8em;}
-.center{text-align: center;}
-/****/
-.related {
-	color: #fff;
-	background: #494A5F;
-	text-align: center;
-	font-size: 1.25em;
-	padding: 0.5em 0;
-	overflow: hidden;
-}
-
-.related > a {
-	vertical-align: top;
-	width: calc(100% - 20px);
-	max-width: 340px;
-	display: inline-block;
-	text-align: center;
-	margin: 20px 10px;
-	padding: 25px;
-	font-family: "Microsoft YaHei","宋体","Segoe UI", "Lucida Grande", Helvetica, Arial,sans-serif, FreeSans, Arimo;
-}
-.related a {
-	display: inline-block;
-	text-align: left;
-	margin: 20px auto;
-	padding: 10px 20px;
-	opacity: 0.8;
-	-webkit-transition: opacity 0.3s;
-	transition: opacity 0.3s;
-	-webkit-backface-visibility: hidden;
-	text-decoration: none;
-}
-
-.related a:hover,
-.related a:active {
-	opacity: 1;
-}
-
-.related a img {
-	max-width: 100%;
-	opacity: 0.8;
-	border-radius: 4px;
-}
-.related a:hover img,
-.related a:active img {
-	opacity: 1;
-}
-.related h3{font-family: "Microsoft YaHei", sans-serif;font-size: 1.2em}
-.related a h3 {
-	font-size: 0.85em;
-	font-weight: 300;
-	margin-top: 0.15em;
-	color: #fff;
-}
-/* icomoon */
-.icon-htmleaf-home-outline:before {
-	content: "\e5000";
-}
-
-.icon-htmleaf-arrow-forward-outline:before {
-	content: "\e5001";
-}
-
-@media screen and (max-width: 1024px) {
-	.htmleaf-header {
-		padding: 2em 10% 2em;
-	}
-	.htmleaf-header h1 {
-        font-size:1.4em;
-    }
-    .htmleaf-links{font-size: 1.4em}
-}
-
-@media screen and (max-width: 960px) {
-	.htmleaf-header {
-		padding: 2em 10% 2em;
-	}
-	.htmleaf-header h1 {
-        font-size:1.2em;
-    }
-    .htmleaf-links{font-size: 1.2em}
-    .related h3{font-size: 1em;}
-	.related a h3 {
-		font-size: 0.8em;
-	}
-}
-
-@media screen and (max-width: 766px) {
-	.htmleaf-header h1 {
-        font-size:1.3em;
-    }
-    .htmleaf-links{font-size: 1.3em}
-}
-
-@media screen and (max-width: 640px) {
-	.htmleaf-header {
-		padding: 2em 10% 2em;
-	}
-	.htmleaf-header h1 {
-        font-size:1em;
-    }
-    .htmleaf-links{font-size: 1em}
-    .related h3{font-size: 0.8em;}
-	.related a h3 {
-		font-size: 0.6em;
-	}
-}
+/*中间部分*/
+#live-content{width:92%;height: 600px;margin-left:110px; margin-top:90px;float:left;z-index: -5;}
+/*#conten-right{background-color: #122b40;width:320px;height:500px;position: absolute;right: 30px;top: 0;}*/
+#live-content .live-c1{background-color: white;height: 600px;z-index: -1;}
+#live-content .live-c7{background-color: white;z-index: 1;}
+#live-content .live-c4{background-color: #f6f5ec;height: 300px;padding-left: 20px;}
+#live-content .personMessage{padding-left: 40px;padding-right:40px;padding-top: 30px;padding-bottom: 20px;}
+#live-content .personMessage h2{color: #444444;}
+#live-content .personMessage p{text-align:justify-all;color: #878787;font-size: medium;margin-left: 20px;}
+#live-content .personMessage p span{margin-left: 40px;}
+#live-content .personMessage .rowNull{height: 50px;}
+#live-content .personMessage .inputStyle1{color: rgba(255,255,255,0.8);background-color: #6950A1;border:none;outline: none;}
+#live-content .personMessage .input-group span{font-size:medium;background-color:#6950A1;border-top-left-radius: 15px;border-bottom-left-radius: 15px;border: solid 1px #6950A1;}
+#live-content .personMessage .input5{border: solid 1px #6950A1;color: #878787; border-top-right-radius: 15px;border-bottom-right-radius: 15px;}
+#live-content .online-live{height: 400px;background-color: black;margin-left: 20px;text-align: center;}
+#live-content .live-link{padding: 15px;}
+#live-content .live-link span{color: #87807b;margin-left: 5px;}
+#live-content #danMu{background-color: #edddf2;margin-left: 20px;margin-right: 10px;padding-top: 20px;height: 480px;}
+#live-content #danMu p{padding-left:20px;color: #8552a1;}
+#live-content #danMu p span{padding-left: 15px;color: #777777;}
+#live-content #insertImg{background-color:white;;margin-left: 20px;margin-right: 10px;text-align: center;padding-top:10px;height: 70px;}
+#live-content #comment{background-color:white;;margin-left: 20px;margin-right: 10px;padding-left: 10px;padding-right: 10px;padding-bottom: 20px;}
+#live-content #comment .inputStyle1{color: rgba(255,255,255,0.8);background-color: #6950A1;border:none;outline: none;}
+#live-content #comment .input-group span{font-size:medium;background-color:#6950A1;border-top-right-radius: 5px;border-bottom-right-radius: 5px;border: solid 1px #6950A1;}
+#live-content #comment .input5{border-top-left-radius: 5px;border-bottom-left-radius: 5px;border: solid 1px #6950A1; }

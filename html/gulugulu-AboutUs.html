@@ -1,16 +1,77 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>gulugulu直播间</title>
-    <link rel="stylesheet" type="text/css" href="../css/gulugulu.css">
-    <link rel="stylesheet" type="text/css" href="../css/gulugulu-live.css">
-    <!--<link rel="stylesheet" href="css/bootstrap.css">-->
-    <link rel="stylesheet" href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css">
-</head>
+    <title>gulugulu关于我们</title>
 
+    <link rel="stylesheet" type="text/css" href="../css/gulugulu.css">
+    <!--<link rel="stylesheet" href="../css/bootstrap.css">-->
+    <link rel="stylesheet" href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css">
+    <style type="text/css" rel="stylesheet">
+        #banner01{
+            width: 100%;
+            height: 550px;
+            margin-top: 60px;
+            background-image: url("../images/banner01.jpg");
+            background-size: cover;
+        }
+        #aboutUsHeader{
+            width: 100%;
+            text-align: center;
+            padding: 15px;
+        }
+        #aboutUsHeader h4{
+            display: inline-block;
+            padding-left: 15px;
+
+        }
+        #aboutUs{
+            width: 100%;
+            background-color: #2b542c;
+        }
+        #aboutUs .abImg img{
+            height: 20px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
+        #aboutUs .abImg .col-md-7{
+            padding-left: 0;
+        }
+        #aboutUs #xy{
+            padding-top: 60px;
+            padding-bottom: 60px;
+            background-color: #e8eaf6;
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+        #aboutUs #xy .col-md-5 img{
+
+        }
+        #aboutUs #xy p{
+          margin: 0;
+        }
+        #aboutUs #xy .pElement{
+            margin-top: 15px;
+            margin-bottom: 15px;
+            line-height: 25px;
+            color:#424242;
+        }
+        #aboutUs #xy hr{
+            margin: 0;
+            /*border: none;*/
+            /*border-top: */
+            /*background-color: #686868;*/
+        }
+        #aboutUs #xy .abFavour{
+            margin-top: 10px;
+        }
+        #aboutUs #ld{
+            background-color: #9fa8da;
+            height: 300px;
+        }
+    </style>
+</head>
 <body>
 <!--导航栏-->
 <nav class="navbar navbar-define navbar-fixed-top" role="navigation" id="nav">
@@ -29,7 +90,7 @@
             <div id='classifyContent'>
             <a href='../html/gulugulu-detail.html'><h5>星际争霸</h5></a>
             <a href='#'><h5>黎明杀机</h5></a>
-            <a href='../html/gulugulu-divide.html'><h5>&nbsp;&nbsp;全部&nbsp;&nbsp;&nbsp;></h5></a></div></div>
+            <a href='#'><h5>&nbsp;&nbsp;全部&nbsp;&nbsp;&nbsp;></h5></a></div></div>
             <div><h6>&nbsp;&nbsp;</h6></div>
             <div id='classifyTitle'>
             <a href='#'><h4>其他</h4></a>
@@ -40,8 +101,8 @@
             </div>">分类<b class="caret"></b></a></li>
 
                 <li><a href="#" id="aboutId" data-html="true" data-content="<div class='aboutOurs'>
-            <div class='aboutStyle'><img src='images/developer-icon.png' height='25px' align='left'><a href='#'><h5>关于我们</h5></a></div>
-            <div class='aboutStyle'><img src='images/about-icon.png' height='25px' align='left'><a href='#'><h5>隐私政策</h5></a></div>
+            <div class='aboutStyle'><img src='../images/developer-icon.png' height='25px' align='left'><a href='../html/gulugulu-AboutUs.html'><h5>关于我们</h5></a></div>
+            <div class='aboutStyle'><img src='../images/about-icon.png' height='25px' align='left'><a href='#'><h5>隐私政策</h5></a></div>
             </div>">&bull;&bull;&bull;&nbsp;&nbsp;&nbsp;</a></li>
             </ul>
         </div>
@@ -225,158 +286,111 @@
     </div><!-- /.modal -->
 </div>
 
-<!--直播导航-->
-<div class="navLive">
-            <div class="row"><br>
-        <ul>
-            <li class="navLive-item">
-                <a class="navStyle" href="#"><span>返回首页</span></a>
-                <a class="imgHidden" href="#"><img src="../images/shouyeicon.png"></a>
-                <a class="imgHidden" href="#">首页</a>
-            </li>
-            <li class="navLive-item">
-                <a class="navStyle" href="#"><span>我的订阅</span></a>
-                <a class="imgHidden" href="#"><img src="../images/订阅icon-侧导航栏.png"></a>
-                <a class="imgHidden" href="#">订阅</a>
-            </li>
-            <li class="navLive-item item-hidden">
-                <a class="heng"><span>——————————————</span></a>
-            </li>
-            <li class="navLive-item">
-                <a class="item-img" href="#">&nbsp;<img src="../images/赛事直播icon.png" height="20px"><span>赛事直播</span></a>
-                <a class="imgHidden" href="#">赛事</a>
-                <ul>
-                    <li><a href="#"><img src="../images/比赛icon.png" height="14px"><span>LPL夏季赛-英雄联盟</span></a></li>
-                    <li><a href="#"><img src="../images/比赛icon.png" height="14px"><span>Ti8国际邀请赛-DOTA2</span></a></li>
-                    <li><a href="#"><img src="../images/比赛icon.png" height="14px"><span>LCK夏季赛-英雄联盟</span></a></li>
-                    <li><a href="#"><img src="../images/比赛icon.png" height="14px"><span>王者荣耀冠军杯</span></a></li>
-                </ul>
-            </li>
-            <li class="navLive-item item-hidden">
-                <a class="heng"><span>——————————————</span></a>
-            </li>
-            <li class="navLive-item">
-                <a class="item-img" href="#">&nbsp;<img src="../images/游戏icon.png" height="20px"><span>游戏</span></a>
-                <a class="imgHidden" href="#">游戏</a>
-                <ul>
-                    <li class="liBox">
-                        <a class="li-item" href="#">绝地求生</a>
-                        <a class="li-item" href="#">王者荣耀</a>
-                    </li>
-                    <li class="liBox">
-                        <a class="li-item" href="#">绝地求生</a>
-                        <a class="li-item" href="#">王者荣耀</a>
-                    </li>
-                    <li class="liBox">
-                        <a class="li-item" href="#">绝地求生</a>
-                        <a class="li-item" href="#">王者荣耀</a>
-                    </li>
-                    <li class="liBox">
-                        <a class="li-item" href="#">绝地求生</a>
-                        <a class="li-item" href="#">王者荣耀</a>
-                    </li>
-                </ul>
-            </li>
-            <li class="navLive-item item-hidden">
-                <a class="heng"><span>——————————————</span></a>
-            </li>
-            <li class="navLive-item">
-                <a class="item-img" href="#">&nbsp;<img src="../images/娱乐icon.png" height="20px"><span>娱乐</span></a>
-                <a class="imgHidden" href="#">娱乐</a>
-                <ul>
-                    <li class="liBox">
-                        <a class="li-item" href="#">绝地求生</a>
-                        <a class="li-item" href="#">王者荣耀</a>
-                    </li>
-                    <li class="liBox">
-                        <a class="li-item" href="#">绝地求生</a>
-                        <a class="li-item" href="#">王者荣耀</a>
-                    </li>
-                </ul>
-            </li>
-        </ul>
+<!--banner-->
+<div id="banner01"></div>
+<div><img src="../images/海报简介1-01.jpg" width="100%"> </div>
+<div><img src="../images/海报简介2-01.jpg" width="100%"> </div>
+<div><img src="../images/海报简介3-01.jpg" width="100%"> </div>
 
+<!--关于我们信息-->
+<div id="aboutUsHeader"><img src="../images/团队介绍icon.png" height="50px"><h4>团队成员介绍</h4></div>
+<div class="container" id="aboutUs">
+<div class="row">
+    <div class="col-md-6" id="xy">
+        <div class="col-md-5"><img src="../images/个人1-01%20.png" height="250px"></div>
+        <div class="col-md-7">
+            <div class="row ab">
+            <h4>Melonmelon</h4>
+            <p>UI设计</p>
+            </div>
+            <div class="row abImg">
+                <div class="col-md-7">
+                    <img src="../images/联系方式1-1.png">&nbsp;&nbsp;<img src="../images/联系方式1-2.png">
+                        <hr />
+                </div>
+            </div>
+            <div class="row">
+                <p class="pElement">根据网站需求，对网站的整体页面风格、交互设计、界面结构、
+                    操作流程等作出设计。<br>
+                    负责网站中的各页面、图标、LOGO、按钮、海报、文字排版等相
+                    关元素的设计，并对页面进行优化使用户操作更趋于人性化。</p>
+            </div>
+            <div class="row abImg">
+                <div class="col-md-7">
+                    <hr />
+                </div>
+            </div>
+            <div class="row abFavour">
+                <img src="../images/favour1.png" height="20px">
+            </div>
         </div>
-    <div id="mini"><img src="../images/展开btn-01.png" height="150px"></div>
+    </div>
+    <div class="col-md-6" id="ld"></div>
+</div>
 </div>
 
-<!--直播内容-->
-<div class="container" id="live-content">
-    <div class="row">
-        <div class="col-md-1 live-c1" id="live1"></div>
-        <div class="col-md-7 live-c7" id="live2">
-            <div class="row personMessage">
-                <div class="col-md-9">
-                    <div class="row">
-                        <div class="col-md-2"><div class="row"><img src="../images/头像-01.png" height="90px"></div></div>
-                        <div class="col-md-10"><div class="row">
-                            <h3>【魔兽RPG】江湖险恶，唯莫作伴</h3>
-                            <p>木子无鸣<span><img src="../images/在线人数icon.png" height="18px">&nbsp;</span>14,158.000</p>
-                        </div></div>
-                    </div>
+<!--版尾-->
+<div id="version">
+    <div class="container" id="version2">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="row">
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;友情链接 / LINKS</p>
                 </div>
-                <div class="col-md-3"><div class="row rowNull"></div>
-                    <div class="row">
-                        <div class="input-group">
-                             <span class="input-group-addon input4" id="basic-addon3">&nbsp;&nbsp;<img src="../images/关注icon.png" height="18px">
-                            <input type="button" class="inputStyle1" id="focus1" value="关注" onclick="focusShow()">&nbsp;</span>
-                            <input type="text" class="form-control input5" id="focus2" value="764420"
-                                   aria-describedby="basic-addon3">
-                        </div>
-                        <!--</div>-->
+                <br>
+                <div class="row">
+                    <div class="col-md-6">
+                        <ul>
+                            <li><a href="https://my.163.com/">-&nbsp;&nbsp;&nbsp;网易游戏</a></li>
+                            <li><a href="https://www.douyu.com/">-&nbsp;&nbsp;&nbsp;斗鱼直播</a></li>
+                            <li><a href="http://www.huya.com/">-&nbsp;&nbsp;&nbsp;虎牙直播</a></li>
+                            <li><a href="https://www.gamersky.com/">-&nbsp;&nbsp;&nbsp;游客星空</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <ul>
+                            <li><a href="http://www.shouyou.com/">-&nbsp;&nbsp;&nbsp;手游</a></li>
+                            <li><a href="http://www.yy.com/">-&nbsp;&nbsp;&nbsp;YY直播</a></li>
+                            <li><a href="https://egame.qq.com/">-&nbsp;&nbsp;&nbsp;企鹅直播</a></li>
+                            <li><a href="http://www.4399.com/">-&nbsp;&nbsp;&nbsp;4399</a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
-            <div class="row online-live">
-                <!--放置在线直播-->
+            <div class="col-md-6">
+                <img src="../images/logo.png" height="160px">
             </div>
-            <div class="row live-link">
-                <div class="col-md-7"></div>
-                <div class="col-md-5">
-                    <div class="row">
-                        <div class="col-md-4"><img src="../images/订阅icon.png" height="30px"><span>订阅</span></div>
-                        <div class="col-md-4"><img src="../images/分享icon.png" height="30px"><span>分享</span></div>
-                        <div class="col-md-4"><img src="../images/举报icon.png" height="30px"><span>举报</span></div>
-                    </div>
+            <div class="col-md-3">
+                <div class="row" id="vp1">
+                    <p>关于我们 / ABOUTS</p>
+                    <p><sup>__________</sup></p>
+                </div>
+                <div class="row" id="vp2">
+                    <p class="vp">我们来自五湖四海、但共同的目标孕育着同一个理想</p>
+                    <p class="vp">出发点不同但目的地一样，年轻的新心在这一刻相聚</p>
+                    <p class="vp">团结一致、不离不弃，斩破风浪、勇敢起航</p>
+                </div>
+                <div class="row" id="vp3">
+                    <img src="../images/v1.png" height="30px">
+                    <img src="../images/v2.png" height="30px">
+                    <img src="../images/v3.png" height="30px">
+                    <img src="../images/v4.png" height="30px">
+                    <img src="../images/v5.png" height="30px">
                 </div>
             </div>
         </div>
-        <div class="col-md-4 live-c4">
-            <div class="row" id="danMu">
-                <p>青柠:<span>驾临直播间</span></p>
-                <p>故人、:<span>树精来三个</span></p>
-            </div>
-            <div class="row" id="insertImg">
-               <img src="../images/弹幕插图.png" height="60px">
-            </div>
-            <div class="row" id="comment">
-                <div class="input-group">
-                    <input type="text" class="form-control input5" placeholder="发送弹幕可独得主播恩宠噢~"
-                           aria-describedby="basic-addon4">
-                    <span class="input-group-addon" id="basic-addon4">
-                    <input type="button" class="inputStyle1" id="sendMessage" value="发送" ></span>
-                </div>
-            </div>
-        </div>
-
     </div>
 </div>
-<!--<div id="conten-right"></div>-->
 
-
-<!--<script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>-->
-<!--<script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>-->
+<script src="../js/gulu1.js"></script>
 <script src="../js/jquery-3.3.1.min.js"></script>
 <script src="../js/bootstrap.min.js"></script>
-<script src="../js/gulu1.js"></script>
 <!--<script src="http://cdn.bootcss.com/jquery/1.11.0/jquery.min.js" type="text/javascript"></script>-->
-<script>window.jQuery || document.write('<script src="../js/jquery-3.3.1.min.js"><\/script>')</script>
-<script type="text/javascript" src="../js/nav.js"></script>
 <script>
     // 二级导航
-    $ (function (){
-        $ ("#classifyId").popover ({placement:'bottom',trigger: 'focus'});
-        $ ("#aboutId").popover({placement:'bottom',trigger: 'focus'})
+    $(function () {
+        $("#classifyId").popover({placement: 'bottom', trigger: 'focus'});
+        $("#aboutId").popover({placement: 'bottom', trigger: 'focus'});
     });
 </script>
 </body>
