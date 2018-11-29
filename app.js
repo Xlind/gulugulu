@@ -154,11 +154,11 @@ app.post('/login', function (req, res) {
 app.get('/logout', function (req, res) {
     // 清除登陆状态
     req.session.user = null
-  
+
     // 重定向到登录页
     res.redirect('/')
-  })
+})
 
-app.listen(3000, function () {
+app.listen(8003, function () {
     console.log('express is running...')
 })
