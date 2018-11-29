@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gulugulu直播间</title>
+    <link rel="stylesheet" type="text/css" href="./public/css/gulugulu.css">
+    <link rel="stylesheet" type="text/css" href="./public/css/gulugulu-live.css">
+    <!--<link rel="stylesheet" href="css/bootstrap.css">-->
+    <link rel="stylesheet" href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css">
+</head>
+
+<body>
+    <!--导航栏-->
+    <nav class="navbar navbar-define navbar-fixed-top" role="navigation" id="nav">
+        <div class="container-f">
+            <div class="navbar-header">
+                <img src="./public/images/logo.png" height="45px">
+            </div>
+            <!--<div>-->
+            <div class="navLeft">
+                <ul class="nav navbar-nav navbar-left">
+                    <li class="active"><a href="/">首页</a></li>
+                    <li><a href="/gulugulu-live">直播</a></li>
+                    <li><a href="#" id="classifyId" rel="popover" data-html="true" data-content="<div class='row classify'>
+            <div id='classifyTitle'>
+            <a href='#'><h4>游戏</h4></a>
+            <div id='classifyContent'>
+            <a href='/gulugulu-detail'><h5>星际争霸</h5></a>
+            <a href='#'><h5>黎明杀机</h5></a>
+            <a href='/gulugulu-divide'><h5>&nbsp;&nbsp;全部&nbsp;&nbsp;&nbsp;></h5></a></div></div>
+            <div><h6>&nbsp;&nbsp;</h6></div>
+            <div id='classifyTitle'>
+            <a href='#'><h4>其他</h4></a>
+            <div id='classifyContent'>
+            <a href='#'><h5>&nbsp;&nbsp;&nbsp;娱乐&nbsp;&nbsp;&nbsp;</h5></a>
+            <a href='#'><h5>&nbsp;&nbsp;&nbsp;体育&nbsp;&nbsp;&nbsp;</h5></a>
+            <a href='#'><h5>&nbsp;&nbsp;二次元&nbsp;&nbsp;&nbsp;</h5></a></div></div>
+            </div>">分类<b
+                                class="caret"></b></a></li>
+
+                    <li><a href="#" id="aboutId" data-html="true" data-content="<div class='aboutOurs'>
+            <div class='aboutStyle'><img src='./public/images/developer-icon.png' height='25px' align='left'><a href='/gulugulu-AboutUs'><h5>关于我们</h5></a></div>
+            <div class='aboutStyle'><img src='./public/images/about-icon.png' height='25px' align='left'><a href='/gulugulu-AboutUs'><h5>隐私政策</h5></a></div>
+            </div>">&bull;&bull;&bull;&nbsp;&nbsp;&nbsp;</a></li>
+                </ul>
+            </div>
+            <form class="navbar-form navbar-left input-group" role="search">
+                <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1">
+                        <a href="#" class="glyphicon glyphicon-search"></a>
+                    </span>
+                    <input type="text" class="form-control" placeholder="搜索" aria-describedby="basic-addon1">
+                    <!--<input type="text" class="form-control" placeholder="Search">-->
+                </div>
+            </form>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li id="navRight">
+                    <a href="/gulugulu-history">
+                        <img src="./public/images/history-icon.png" height="18px">历史
+                    </a>
+                </li>
+                <!--<li><a href="#"><span class="glyphicon glyphicon-user " ></span> 注册</a></li>-->
+
+                {{ if user }}
+                <li><label class="sessionUname">{{ user.username }}</label></li>
+                <li><label class="sessionUname"><a href="/logout">&nbsp;&nbsp;退出</a></label></li>
+                {{ else }}
+                <li id="login">
+                    <button data-toggle="modal" data-target="#myModal2">
+                        <span class="glyphicon glyphicon-user "></span>
+                        &nbsp;&nbsp;登录
+                    </button>
+                <li id="liH"><span>|</span></li>
+                <li id="register">
+                    <button data-toggle="modal" data-target="#myModal">注册
+                    </button>
+                </li>
+
+                {{ /if }}
+            </ul>
+            <!--</div>-->
+        </div>
+    </nav>
+
+    <!-- 登录框 -->
+    <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="row">
+                    <div class="col-sm-6 imgPhoto">
+                        <div class="row">
+                            <br>
+                            <img src="./public/images/formPhoto.png" height="280px">
+                        </div>
+                    </div>
+                    <div class="col-sm-6 modalLand">
+                        <div class="row loginHeight">
+                            <div class="col-sm-9">
+                                <img src="./public/images/landHeader.png" height="30px">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <form class="form-horizontal" role="form" id="login_form" method="POST" action="/login">
+                                <div class="form-group">
+                                    <label for="name" class="control-label"></label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control input1" id="name1" name="username"
+                                            placeholder="用户名/邮箱">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="password" class="control-label"></label>
+                                    <div class="col-sm-9">
+                                        <input type="password" class="form-control input1" id="password2" name="pw1"
+                                            placeholder="输入密码">
+                                    </div>
+                                </div>
+                                <div class="form-group formXie">
+                                    <div class="col-sm-9">
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox">
+                                                <span>记住我</span>
+                                                <a href="#">忘记密码？</a>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group formXie">
+                                    <div class="col-sm-9">
+                                        <button type="submit" class="btn">登录</button>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-9">
+                                        <p>————————使用第三方账户登录—————————</p>
+                                    </div>
+                                    <div class="col-sm-9 colStyle">
+                                        <img src="./public/images/微博登录-01.png" height="32px">
+                                        <img src="./public/images/微信登录-01.png" height="32px">
+                                        <img src="./public/images/QQ登录-01.png" height="32px">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
+    </div>
+
+    <!--注册框-->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="row">
+                    <div class="col-sm-6 imgPhoto">
+                        <div class="row">
+                            <br><br>
+                            <img src="./public/images/formPhoto.png" height="280px">
+                        </div>
+                    </div>
+                    <div class="col-sm-6 modalLand">
+                        <div class="row loginHeight">
+                            <div class="col-sm-9">
+                                <img src="./public/images/loginHeader.png" height="30px">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <form action="/register" class="form-horizontal" role="form" name="form1" id="registFrom"
+                                method="POST">
+                                <div class="form-group">
+                                    <input type="hidden" name="Codemeg" id="Codemeg" class="form-control ">
+                                </div>
+                                <div class="form-group">
+                                    <label for="name" class="control-label"></label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control input1" id="name" placeholder="请输入名字，至少3个长度"
+                                            name="username">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email" class="control-label"></label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control input1" id="email" placeholder="请输入合法邮箱"
+                                            name="email">
+                                    </div>
+                                </div>
+                                <!-- <div class="form-group formStyle">
+                                <div class="col-sm-9">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control input2" id="yanZh" placeholder="请输入验证码"
+                                               aria-describedby="basic-addon2" name="code">
+                                        <span class="input-group-addon input3" id="basic-addon2">
+                                            <input type="button" class="inputStyle" value="获取验证码" onclick="gainVerificationCode(this)"></span>
+                                    </div>
+                                </div>
+                            </div> -->
+                                <div class="form-group">
+                                    <label for="password" class="control-label"></label>
+                                    <div class="col-sm-9">
+                                        <input type="password" class="form-control input1" id="password" placeholder="设置密码，至少6个长度含字母和数字"
+                                            name="pw1">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="password1" class="control-label"></label>
+                                    <div class="col-sm-9">
+                                        <input type="password" class="form-control input1" id="password1" placeholder="再次确认密码"
+                                            name="password">
+                                    </div>
+                                </div>
+                                <!--<div class="form-group formXie">-->
+                                <!--<div class="col-sm-9">-->
+                                <!--<div class="checkbox">-->
+                                <!--<label>-->
+                                <!--<input type="checkbox" id="check1" onclick="check()"><span>已同意<a href="#">《GULUGULU用户协议》</a></span>-->
+                                <!--</label>-->
+                                <!--</div>-->
+                                <!--</div>-->
+                                <!--</div>-->
+                                <div class="form-group">
+                                    <div class="col-sm-9">
+                                        <button class="btn btn-primary" id="submit">注册</button>
+                                    </div>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
+    </div>
+
+<!--直播导航-->
+<div class="navLive">
+            <div class="row"><br>
+        <ul>
+            <li class="navLive-item">
+                <a class="navStyle" href="/"><span>返回首页</span></a>
+                <a class="imgHidden" href="#"><img src="./public/images/shouyeicon.png"></a>
+                <a class="imgHidden" href="/">首页</a>
+            </li>
+            <li class="navLive-item">
+                <a class="navStyle" href="#"><span>我的订阅</span></a>
+                <a class="imgHidden" href="#"><img src="./public/images/订阅icon-侧导航栏.png"></a>
+                <a class="imgHidden" href="#">订阅</a>
+            </li>
+            <li class="navLive-item item-hidden">
+                <a class="heng"><span>——————————————</span></a>
+            </li>
+            <li class="navLive-item">
+                <a class="item-img" href="#">&nbsp;<img src="./public/images/赛事直播icon.png" height="20px"><span>赛事直播</span></a>
+                <a class="imgHidden" href="#">赛事</a>
+                <ul>
+                    <li><a href="/gulugulu-detail"><img src="./public/images/比赛icon.png" height="14px"><span>LPL夏季赛-英雄联盟</span></a></li>
+                    <li><a href="/gulugulu-detail"><img src="./public/images/比赛icon.png" height="14px"><span>Ti8国际邀请赛-DOTA2</span></a></li>
+                    <li><a href="/gulugulu-detail"><img src="./public/images/比赛icon.png" height="14px"><span>LCK夏季赛-英雄联盟</span></a></li>
+                    <li><a href="/gulugulu-detail"><img src="./public/images/比赛icon.png" height="14px"><span>王者荣耀冠军杯</span></a></li>
+                </ul>
+            </li>
+            <li class="navLive-item item-hidden">
+                <a class="heng"><span>——————————————</span></a>
+            </li>
+            <li class="navLive-item">
+                <a class="item-img" href="#">&nbsp;<img src="./public/images/游戏icon.png" height="20px"><span>游戏</span></a>
+                <a class="imgHidden" href="#">游戏</a>
+                <ul>
+                    <li class="liBox">
+                        <a class="li-item" href="/gulugulu-detail">绝地求生</a>
+                        <a class="li-item" href="/gulugulu-detail">王者荣耀</a>
+                    </li>
+                    <li class="liBox">
+                        <a class="li-item" href="/gulugulu-detail">堡垒之夜</a>
+                        <a class="li-item" href="/gulugulu-detail">英雄联盟</a>
+                    </li>
+                    <li class="liBox">
+                        <a class="li-item" href="/gulugulu-detail">荒野行动</a>
+                        <a class="li-item" href="/gulugulu-detail">炉石传说</a>
+                    </li>
+                    <li class="liBox">
+                        <a class="li-item" href="/gulugulu-detail">魔兽争霸</a>
+                        <a class="li-item" href="/gulugulu-detail">穿越火线</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="navLive-item item-hidden">
+                <a class="heng"><span>——————————————</span></a>
+            </li>
+            <li class="navLive-item">
+                <a class="item-img" href="#">&nbsp;<img src="./public/images/娱乐icon.png" height="20px"><span>娱乐</span></a>
+                <a class="imgHidden" href="#">娱乐</a>
+                <ul>
+                    <li class="liBox">
+                        <a class="li-item" href="#">二次元</a>
+                        <a class="li-item" href="#">体育</a>
+                    </li>
+                    <li class="liBox">
+                        <a class="li-item" href="#">纪录</a>
+                        <a class="li-item" href="#">音乐</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        </div>
+    <div id="mini"><img src="./public/images/展开btn-01.png" height="150px"></div>
+</div>
+
+<!--直播内容-->
+<div class="container" id="live-content">
+    <div class="row">
+        <div class="col-md-1 live-c1" id="live1"></div>
+        <div class="col-md-7 live-c7" id="live2">
+            <div class="row personMessage">
+                <div class="col-md-9">
+                    <div class="row">
+                        <div class="col-md-2"><div class="row"><img src="./public/images/头像-01.png" height="90px"></div></div>
+                        <div class="col-md-10"><div class="row">
+                            <h3>【魔兽RPG】江湖险恶，唯莫作伴</h3>
+                            <p>木子无鸣<span><img src="./public/images/在线人数icon.png" height="18px">&nbsp;</span>14,158.000</p>
+                        </div></div>
+                    </div>
+                </div>
+                <div class="col-md-3"><div class="row rowNull"></div>
+                    <div class="row">
+                        <div class="input-group">
+                             <span class="input-group-addon input4" id="basic-addon3">&nbsp;&nbsp;<img src="./public/images/关注icon.png" height="18px">
+                            <input type="button" class="inputStyle1" id="focus1" value="关注" onclick="focusShow()">&nbsp;</span>
+                            <input type="text" class="form-control input5" id="focus2" value="764420"
+                                   aria-describedby="basic-addon3">
+                        </div>
+                        <!--</div>-->
+                    </div>
+                </div>
+            </div>
+            <div class="row online-live">
+                <!--放置在线直播-->
+            </div>
+            <div class="row live-link">
+                <div class="col-md-7"></div>
+                <div class="col-md-5">
+                    <div class="row">
+                        <div class="col-md-4"><img src="./public/images/订阅icon.png" height="30px"><span>订阅</span></div>
+                        <div class="col-md-4"><img src="./public/images/分享icon.png" height="30px"><span>分享</span></div>
+                        <div class="col-md-4"><img src="./public/images/举报icon.png" height="30px"><span>举报</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 live-c4">
+            <div class="row" id="danMu">
+                <p>青柠:<span>驾临直播间</span></p>
+                <p>故人、:<span>树精来三个</span></p>
+            </div>
+            <div class="row" id="insertImg">
+               <img src="./public/images/弹幕插图.png" height="60px">
+            </div>
+            <div class="row" id="comment">
+                <div class="input-group">
+                    <input type="text" class="form-control input5" placeholder="发送弹幕可独得主播恩宠噢~"
+                           aria-describedby="basic-addon4">
+                    <span class="input-group-addon" id="basic-addon4">
+                    <input type="button" class="inputStyle1" id="sendMessage" value="发送" ></span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!--<div id="conten-right"></div>-->
+
+
+<!--<script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>-->
+<!--<script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>-->
+<script src="./public/js/jquery-3.3.1.min.js"></script>
+<script src="./public/js/bootstrap.min.js"></script>
+<script src="./public/js/gulu1.js"></script>
+<!--<script src="http://cdn.bootcss.com/jquery/1.11.0/jquery.min.js" type="text/javascript"></script>-->
+<script>window.jQuery || document.write('<script src="./public/js/jquery-3.3.1.min.js"><\/script>')</script>
+<script type="text/javascript" src="./public/js/nav.js"></script>
+<script>
+    // 二级导航
+    $ (function (){
+        $ ("#classifyId").popover ({placement:'bottom',trigger: 'focus'});
+        $ ("#aboutId").popover({placement:'bottom',trigger: 'focus'})
+    });
+</script>
+</body>
+</html>

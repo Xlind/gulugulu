@@ -1,0 +1,188 @@
+html body{
+    background-color: #d6bcff;
+}
+input{
+    outline:none;
+}
+
+/*视频详情banner*/
+#bannerVideo{
+    margin-top: 60px;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 45px;
+    padding-bottom: 70px;
+    background: url("../images/bg1-01.jpg") no-repeat ;
+    background-size:cover;
+}
+#null2{
+    height: 50px;
+}
+#video2{
+    width: 100%;
+}
+#videoBg{
+    padding: 0;
+}
+#videoLeft{
+    margin: 0;
+    padding: 0;
+}
+#videoRight{
+    height: 440px;
+    background: rgba(38,38,43,0.5);
+}
+#videoRightName{
+    margin-top: 20px;
+    padding-left: 15px;
+    color: white;
+}
+#videoRightName .col-md-4 img{
+    margin-left: 10px;
+    border-radius: 10px;
+}
+#videoRightName .col-md-8{
+    padding-left: 0;
+
+}
+#videoRightName .col-md-8 h6 span,#videoRightName .row h3{
+    color: #b99ad3;
+}
+#videoRightName #videoRightPi{
+    padding-left: 10px;
+}
+#another{
+    position: relative;
+    top: -5px;
+    padding: 15px;
+    background: rgba(38,38,43,0.5);
+}
+#another .col-md-1{
+    padding-left: 0;
+}
+#another span{
+    color: white;
+    font-size: medium;
+    padding-left: 8px;
+}
+
+/*评论框*/
+.container .videoLo{
+    text-align: center;
+    padding-top: 20px;
+}
+.container .commentK{
+    height: 150px;
+    background-color: #9b95c9;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+    padding: 20px;
+    box-shadow: 8px 10px 20px rgba(155,149,201,0.9);
+}
+.container .commentK .commentC{
+    width: 100%;
+    height: 70px;
+    border: none;
+    text-indent: 20px;
+    border-top-right-radius: 16px;
+    border-top-left-radius: 16px;
+}
+.container .commentK .commentLeft{
+    padding-top: 20px;
+}
+.container .commentK .commentLeft img{
+    vertical-align: middle;
+}
+.container .commentK .commentLeft input{
+    margin-left: 20px;
+    padding-left: 10px;
+    height: 28px;
+    border: none;
+    border-radius: 10px;
+    vertical-align: middle;
+}
+.container .commentK .commentCentre{height: 30px;}
+.container .commentK .commentRight{text-align: right;}
+.container .commentK .commentRight button{
+    margin-top: 20px;
+    width: 100px;
+    height: 30px;
+    color: white;
+    background-color: #ce93d8;
+    border: none;
+    border-radius: 10px;
+}
+.container .xxx{
+    height: 200px;
+}
+
+/*评论区与推荐*/
+#commentSection{margin-top: 30px;margin-bottom: 60px;}
+#commentSection #commentS1{background-color: white;padding-bottom: 30px;}
+#commentSection #commentS1 .h4Style,#commentSection #recommend .h4Style{
+    width: 160px;
+    background-color: #b388ff;
+    color:white;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin: 0;
+}
+#commentSection #commentS1 .commentAll{
+    margin-top: 40px;
+    margin-left: 20px;
+}
+#commentSection #commentS1 .commentAll .media,#commentSection #recommend .recommendAll .media{padding-top: 10px;}
+#commentSection #commentS1 .commentAll .media-body{padding-left: 20px;}
+#commentSection #commentS1 .commentAll .media-body h5{color: #6f60aa;}
+#commentSection #commentS1 .commentAll .media-body h4{color:#616161;padding-right: 80px;line-height: 30px;}
+#commentSection #commentS1 .commentAll .media-body p{font-size: small;color: #757575;display: inline-block;}
+#commentSection #commentS1 .commentAll .media-body p span{color: #8552a1;padding-left: 20px;cursor:pointer;}
+.form-group{
+    padding-left:20px;
+    display: inline-block;
+    /*visibility: hidden;*/
+}
+#commentSection #commentS1 .commentAll .media-body .form-group input{
+    width:300px;
+    border:solid 1px #8552a1;
+    border-radius: 10px;
+    text-indent: 5px;
+    font-size: small;
+    padding: 3px;
+}
+#commentSection #commentS1 .commentAll .media-body .form-group button{
+    width: 70px;
+    color: white;
+    background-color: #9d92c3;
+    border: none;
+    border-radius: 10px;
+    padding: 4px;
+}
+#commentSection #commentS1 .commentAll .media-body hr{width: 80%;padding-left: 0;margin-left: 0;color: #5e5d7e;height: 2px;}
+#commentSection  #commentS1 .commentAll #commentMore a{
+    /*display: inline-block;*/
+    padding-left: 30px;
+    font-size: large;
+    color: #bf84fd;
+}
+#commentSection #recommend{
+    background-color: white;
+    margin-left: 20px;
+    padding-left: 15px;
+    padding-bottom: 20px;
+}
+#commentSection #recommend .recommendAll{
+    margin-top: 10px;
+    margin-left: 5px;
+}
+#commentSection #recommend .recommendAll .media-body h4{
+    color: #757575;
+}
+#commentSection #recommend .recommendAll .media-body p{
+    color: #757575;
+    font-size: medium;
+}
+#commentSection #recommend .recommendAll .media-body a{text-decoration: none;}

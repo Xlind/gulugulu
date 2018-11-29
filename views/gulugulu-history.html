@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gulugulu历史记录</title>
+    <!--<link rel="stylesheet" type="text/css" href="../css/gulugulu.css">-->
+    <!--<link rel="stylesheet" href="css/bootstrap.css">-->
+    <link rel="stylesheet" href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css">
+
+    <style rel="stylesheet">
+        body{background-image: url("./public/images/bg1.jpg");background-size: cover;}
+        ul li{text-decoration: none;list-style: none;}
+        #history{width:60%;margin-top:90px;margin-bottom: 90px;}
+        #history .historyContent{background-color: white;border-radius: 30px;padding: 30px;}
+        #history .historyContent img, #history .historyContent span{padding-left: 20px;}
+        span{font-size: large;}
+        #history .hcRecord{padding-top: 40px;padding-left: 15px;}
+        #history .hcRecord a{text-decoration: none;color: #414141;}
+        #history .hcRecord .hr1{margin-top: 120px;background-color: #747474;height: 1px;}
+        #history .hcPage{padding-left: 60px;padding-right: 60px;}
+        #history .hcPage a{color: #9675CE;}
+        #yhy img{position: fixed;right: 9%;top: 58%;}
+
+    </style>
+</head>
+<body>
+<div class="container" id="history">
+<div class="historyContent">
+<div class="row">
+    <img src="./public/images/播放历史.png" height="35px"><span>播放历史</span>
+</div>
+    <ul id="itemContainer">
+    <li class="row hcRecord">
+        <div class="col-md-4"><a href="#"><img src="./public/images/视频封面1-01.png" height="150px"></a></div>
+        <div class="col-md-7"><h4><a href="#">七凉的声鉴小店</a></h4><hr class="hr1"></div>
+    </li>
+    <li class="row hcRecord">
+        <div class="col-md-4"><a href="#"><img src="./public/images/视频封面2-01.png" height="150px"></a></div>
+        <div class="col-md-7"><h4><a href="#">刺客信条奥德赛</a></h4><hr class="hr1"></div>
+    </li>
+    <li class="row hcRecord">
+        <div class="col-md-4"><a href="#"><img src="./public/images/视频封面3-01.png" height="150px"></a></div>
+        <div class="col-md-7"><h4><a href="#">唱歌 我是走心的</a></h4><hr class="hr1"></div>
+    </li>
+    <li class="row hcRecord">
+        <div class="col-md-4"><a href="#"><img src="./public/images/视频封面4-01.png" height="150px"></a></div>
+        <div class="col-md-7"><h4><a href="#">木子来摸头像</a></h4><hr class="hr1"></div>
+    </li>
+    <li class="row hcRecord">
+        <div class="col-md-4"><a href="#"><img src="./public/images/视频封面5-01.png" height="150px"></a></div>
+        <div class="col-md-7"><h4><a href="#">詹皇欧洲巡游会面姆巴佩内马尔</a></h4><hr class="hr1"></div>
+    </li>
+    </ul>
+    <div class="row hcPage">
+    <ul class="pager holder">
+        <li class="previous"><a href="#">&larr; Older</a></li>
+        <li class="next"><a href="#">Newer &rarr;</a></li>
+    </ul>
+    </div>
+</div>
+</div>
+
+<div id="yhy">
+<a href="/"><img src="./public/images/返回首页Btn.png" height="300px"></a>
+</div>
+
+
+<!--<script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>-->
+<!--<script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>-->
+<script src="./public/js/jquery-3.3.1.min.js"></script>
+<script src="./public/js/bootstrap.min.js"></script>
+<!--<script src="../js/gulu1.js"></script>-->
+<script>
+    // 二级导航
+    $ (function (){
+        $ ("#classifyId").popover ({placement:'bottom',trigger: 'focus'});
+        $ ("#aboutId").popover({placement:'bottom',trigger: 'focus'})
+    });
+
+    //分页
+
+</script>
+</body>
+</html>
